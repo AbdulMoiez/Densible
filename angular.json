@@ -30,9 +30,23 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/assets/css/plugins/bootstrap-grid.css",
+              "src/assets/css/plugins/swiper.min.css",
+              "src/assets/css/style.css",
+              "src/assets/css/frontend-lite.min.css",
+              "src/assets/css/global.css",
+              "src/assets/css/post-5.css",
+              "src/assets/css/post-642.css",
+              "src/assets/css/style.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/plugins/jquery.min.js",
+              "src/assets/js/plugins/swiper.min.js",
+              "src/assets/js/main.js",
+              "src/assets/js/animation.js",
+              "src/assets/js/slider.js"
+            ]
           },
           "configurations": {
             "production": {
