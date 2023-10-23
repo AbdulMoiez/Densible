@@ -1,0 +1,301 @@
+<!-- banner -->
+<div class="mil-banner-sm mil-deep-bg">
+    <img src="/assets/img/deco/map.png" alt="background map" class="mil-background-image">
+    <div class="mil-deco mil-deco-accent" style="top: 47%; right: 10%; transform: rotate(90deg)"></div>
+    <div class="mil-banner-content">
+        <div class="container mil-relative">
+            <ul class="mil-breadcrumbs mil-mb-30">
+                <li><a routerLink="/">Home</a></li>
+                <li><a routerLink="/collaboration-services">Services</a></li>
+            </ul>
+            <h2 class="mil-uppercase">Collaboration Services</h2>
+        </div>
+    </div>
+</div>
+<!-- banner end -->   
+
+
+        <!-- ??? -->
+        <section class="mil-p-120-60">
+            <div class="container">
+                <div class="mil-mb-90">
+                    <span class="mil-suptitle mil-suptitle-2 mil-mb-30">Our SharePoint Expertise</span>
+
+                    <h2 class="mil-mb-30">Streamline Collaboration and <span class="mil-accent">Boost</span> Productivity with <span class="mil-accent">SharePoint</span></h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="mil-box-center mil-mb-60">
+                            <div class="mil-icon-frame mil-icon-bg mil-icon-frame-md mil-mb-30">
+                                <img src="/assets/img/icons/md/22.svg" alt="SharePoint icon" title="SharePoint icon">
+                            </div>
+                            <h5 class="mil-mb-20">SharePoint</h5>
+                            <p class="mil-mb-30">
+                                Leverage the power of SharePoint to create, manage, and collaborate on documents, tasks, and projects in a centralized platform. Streamline workflows, enhance team collaboration, and improve productivity with SharePoint's robust features and customization &nbsp;&nbsp; options.
+                                </p>
+                            
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mil-box-center mil-mb-60">
+                            <div class="mil-icon-frame mil-icon-bg mil-icon-frame-md mil-mb-30">
+                                <img src="/assets/img/icons/md/20.svg" alt="Power Apps icon" title="Power Apps icon">
+                            </div>
+                            <h5 class="mil-mb-20">Power Apps</h5>
+                            <p class="mil-mb-30">With Power App Service, you can bring your ideas to life using a visual interface and a simple drag-and-drop approach. We offer a variety of pre-built templates and connectors that seamlessly integrate with popular data sources, such as cloud services, databases, and APIs. </p>
+                            <!-- <ul class="mil-dot-list">
+                                <li class="mil-text-sm mil-bold mil-dark">Swift</li>
+                                <li class="mil-text-sm mil-bold mil-dark">Objective-C</li>
+                            </ul> -->
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mil-box-center mil-mb-60">
+                            <div class="mil-icon-frame mil-icon-bg mil-icon-frame-md mil-mb-30">
+                                <img src="/assets/img/icons/md/23.svg" alt="Umbraco icon" title="Umbraco icon">
+                            </div>
+                            <h5 class="mil-mb-20">Umbraco</h5>
+                            <p class="mil-mb-30">Unlock the potential of Umbraco, a flexible and user-friendly content management system (CMS). We provide Umbraco development and customization services to create dynamic and scalable websites and web applications, empowering you to manage and deliver content effortlessly.
+                            </p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ??? end -->
+
+    <!-- left nav tabs -->
+        <section class="mil-p-120-60">
+            <div class="mil-deco" style="top: 0; right: 15%;"></div>
+            <div class="container">
+
+                <span class="mil-suptitle mil-suptitle-2 mil-mb-30">All Devices</span>
+                <h2 class="mil-mb-90"><span class="mil-accent">End-to-End</span> Services</h2>
+
+                <div class="row justify-content-between align-items-center">
+                    <div class="col-lg-5">
+                        <app-tabs [tabsArray]="tabs" (onTabChange)="tabChange($event)"></app-tabs>
+                        </div>
+                    <div class="col-lg-6">
+
+                        <div class="swiper-container mil-tabs-slider mil-mb-60">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide fadeIn" *ngIf="activatedTabIndex ==0">
+
+                                    <div data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
+                                        <div class="mil-icon-frame mil-icon-bg mil-icon-frame-md mil-mb-30">
+                                            <img src="/assets/img/icons/md/21.svg" alt="Consultation and Analysis icon" title="Consultation and Analysis icon">
+                                        </div>
+                                        <div class="mil-mb-30">
+                                            <p>Our experts conduct a thorough consultation and analysis to understand your specific requirements and business objectives. We assess your existing systems, processes, and goals to develop a tailored solution strategy.</p>
+                                        </div>
+                                        <a routerLink="/about-us" class="mil-link"><span>See More</span><i class="fas fa-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide fadeIn" *ngIf="activatedTabIndex ==1">
+
+                                    <div data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
+                                        <div class="mil-icon-frame mil-icon-bg mil-icon-frame-md mil-mb-30">
+                                            <img src="/assets/img/icons/md/22.svg" alt="Solution Design and Development icon" title="Solution Design and Development icon">
+                                        </div>
+                                        <div class="mil-mb-30">
+                                            <p>Based on the analysis, we design and develop customized SharePoint, CRMs, and Umbraco solutions that align with your business needs. Our team ensures seamless integration, scalability, and optimal performance.</p>
+                                        </div>
+                                        <a routerLink="/about-us" class="mil-link"><span>See More</span><i class="fas fa-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide fadeIn" *ngIf="activatedTabIndex ==2">
+
+                                    <div data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
+                                        <div class="mil-icon-frame mil-icon-bg mil-icon-frame-md mil-mb-30">
+                                            <img src="/assets/img/icons/md/23.svg" alt="Implementation and Configuration icon" title="Implementation and Configuration icon">
+                                        </div>
+                                        <div class="mil-mb-30">
+                                            <p>We handle the complete implementation and configuration of SharePoint, CRMs, and Umbraco systems, ensuring smooth deployment and setup. Our team customizes the platforms to meet your unique requirements and ensures data migration and system integration.</p>
+                                        </div>
+                                        <a routerLink="about-us" class="mil-link"><span>See More</span><i class="fas fa-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide fadeIn" *ngIf="activatedTabIndex ==3">
+
+                                    <div data-swiper-parallax="-100" data-swiper-parallax-opacity="0">
+                                        <div class="mil-icon-frame mil-icon-bg mil-icon-frame-md mil-mb-30">
+                                            <img src="/assets/img/icons/md/24.svg" alt=">Maintenance and Optimization icon" title="Maintenance and Optimization icon">
+                                        </div>
+                                        <div class="mil-mb-30">
+                                            <p>Our services include regular maintenance, updates, and optimization of SharePoint, CRMs, and Umbraco systems. We monitor performance, address issues, and enhance functionalities to ensure that your platforms operate smoothly and deliver optimal results.</p>
+                                        </div>
+                                        <a routerLink="/about-us" class="mil-link"><span>See More</span><i class="fas fa-arrow-right"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <!-- left nav tabs end -->
+
+        <div class="container">
+            <div class="mil-divider"></div>
+        </div>
+
+        <!-- ??? -->
+        <section class="mil-p-120-60">
+            <div class="mil-deco" style="top: 0; right: 15%;"></div>
+            <div class="container">
+                <div class="mil-mb-90">
+                    <h2 class="mil-mb-30">Delivering <span class="mil-accent">Industry Specific</span> Share Point <br> Solutions</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="mil-mb-60">
+                            <div class="mil-icon-frame mil-icon-bg mil-icon-frame-md mil-mb-30">
+                                <img src="/assets/img/icons/md/25.svg" alt="Healthcare SharePoint Solutions icon" title="Healthcare SharePoint Solutions icon">
+                            </div>
+                            <h5 class="mil-mb-20">Healthcare SharePoint Solutions</h5>
+                            <p>Secure portals and collaboration platforms for streamlined information sharing, telemedicine, and enhanced patient care. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mil-mb-60">
+                            <div class="mil-icon-frame mil-icon-bg mil-icon-frame-md mil-mb-30">
+                                <img src="/assets/img/icons/md/24.svg" alt="Education SharePoint Solutions icon" title="Education SharePoint Solutions icon">
+                            </div>
+                            <h5 class="mil-mb-20">Education SharePoint Solutions</h5>
+                            <p>Portals and learning management systems for improved communication, online learning, and streamlined administrative processes in educational institutions. </p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="mil-mb-60">
+                            <div class="mil-icon-frame mil-icon-bg mil-icon-frame-md mil-mb-30">
+                                <img src="/assets/img/icons/md/6.svg" alt="Manufacturing SharePoint Services icon" title="Manufacturing SharePoint Services icon">
+                            </div>
+                            <h5 class="mil-mb-20">Manufacturing SharePoint Services</h5>
+                            <p>Custom portals and workflows for streamlined supply chain management, document control, quality assurance, and production tracking in the manufacturing industry. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- ??? end -->
+
+        <div class="container">
+            <div class="mil-divider"></div>
+        </div>
+
+        
+        <!-- reviews -->
+        <section class="mil-gradient-bg mil-p-120-120">
+            <div class="mil-deco mil-deco-accent" style="top: 0; right: 30%;"></div>
+            <div class="mil-deco mil-deco-accent" style="bottom: 0; right: 20%; transform: rotate(180deg)"></div>
+            <div class="container">
+                <div class="swiper-container mil-box-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="row justify-content-between align-items-center" data-swiper-parallax-y="-100" data-swiper-parallax-opacity="0">
+                                <div class="col-lg-3 offset-lg-1">
+
+                                    <div class="mil-team-card  mil-with-dots mil-mb-60" data-swiper-parallax-scale=".8">
+                                        <div class="mil-image-frame mil-mb-30">
+                                            <img src="/assets/img/faces/Sean Joseph.jpg" alt="Sean Joseph Clients" title="Sean Joseph Clients">
+                                            <div class="mil-team-circle"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-7">
+
+                                    <div class="mil-icon-frame mil-light mil-icon-frame-sm mil-mb-60">
+                                        <img src="/assets/img/icons/sm/11.svg" alt="icon">
+                                    </div>
+
+                                    <p class="mil-text-lg mil-light mil-mb-60">Densible's remarkable responsiveness to feedback and ability to adapt to our evolving requirements make them our go-to choice for multiple projects. We highly recommend Densible for anyone seeking top-notch SharePoint solutions and a seamless collaboration.</p>
+
+                                    <h3 class="mil-light mil-mb-15">Sean Joseph</h3>
+                                    <p class="mil-light-soft">Director of Project Management</p>
+                                    <p class="mil-accent">Yunifire</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="row justify-content-between align-items-center" data-swiper-parallax-y="-100" data-swiper-parallax-opacity="0">
+                                <div class="col-lg-3 offset-lg-1">
+
+                                    <div class="mil-team-card  mil-with-dots mil-mb-60" data-swiper-parallax-scale=".8">
+                                        <div class="mil-image-frame mil-mb-30">
+                                            <img src="/assets/img/faces/3.jpg" alt="Tarryn Gillies Clients" title="Tarryn Gillies Clients">
+                                            <div class="mil-team-circle"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-7">
+
+                                    <div class="mil-icon-frame mil-light mil-icon-frame-sm mil-mb-60">
+                                        <img src="/assets/img/icons/sm/11.svg" alt="icon">
+                                    </div>
+
+                                    <p class="mil-text-lg mil-light mil-mb-60">We had the pleasure of working with Densible on our cloud application 
+                                        development project, and they exceeded our expectations in every way.
+                                         Their team demonstrated extensive knowledge of cloud technologies and
+                                          delivered a scalable and secure solution that has transformed our business processes. </p>
+
+                                    <h3 class="mil-light mil-mb-15">Tarryn Gillies</h3>
+                                    <p class="mil-light-soft">Director of Product Management</p>
+                                    <p class="mil-accent">ITStack, Inc</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="row justify-content-between align-items-center" data-swiper-parallax-y="-100" data-swiper-parallax-opacity="0">
+                                <div class="col-lg-3 offset-lg-1">
+
+                                    <div class="mil-team-card  mil-with-dots mil-mb-60" data-swiper-parallax-scale=".8">
+                                        <div class="mil-image-frame mil-mb-30">
+                                            <img src="/assets/img/faces/4.jpg" alt="Tamzyn French Clients" title="Tamzyn French Clients">
+                                            <div class="mil-team-circle"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-lg-7">
+
+                                    <div class="mil-icon-frame mil-light mil-icon-frame-sm mil-mb-60">
+                                        <img src="/assets/img/icons/sm/11.svg" alt="icon">
+                                    </div>
+
+                                    <p class="mil-text-lg mil-light mil-mb-60">Working with Densible on our e-commerce website was a game-changer for
+                                        our business. They took our vision and transformed it into a user-friendly and
+                                         visually appealing online store. The team was responsive, proactive,
+                                          and ensured that every aspect of our website met our requirements.</p>
+
+                                    <h3 class="mil-light mil-mb-15">Tamzyn French</h3>
+                                    <p class="mil-light-soft">Project Management</p>
+                                    <p class="mil-accent">ITSulu, Inc</p>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="mil-slider-nav justify-content-lg-center mil-reviews-btns-space">
+                            <div class="mil-slider-btn-prev mil-box-prev mil-light"><i class="fas fa-arrow-left"></i><span class="mil-h6">Prev</span></div>
+                            <div class="mil-slider-btn-next mil-box-next mil-light"><span class="mil-h6">Next</span><i class="fas fa-arrow-right"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- reviews end -->

@@ -1,0 +1,51 @@
+<!-- projects.component.html -->
+
+  
+<section class="mil-p-120-90">
+    <div class="mil-deco" style="top: 0; right: 20%;"></div>
+    <div class="container">
+        <div class="row align-items-end mil-mb-90">
+            <div class="col-md-8 col-xl-8">
+
+                <span class="mil-suptitle mil-suptitle-2 mil-mb-30">An Ocean Data For You</span>
+                <h2>Industry <span class="mil-accent">Specific Cloud</span>Development</h2>
+
+            </div>
+            <div class="col-md-4 col-xl-4">
+
+                <div class="mil-adaptive-right mil-mt-60-adapt">
+                    
+                    <div class="mil-slider-nav">
+                        <div class="mil-slider-btn-prev mil-revi-prev" (click)="prevSolution()" [class.unable]="currentIndex === 0">
+                            <i class="fas fa-arrow-left"></i><span class="mil-h6">Prev</span>
+                        </div>
+                        <div class="mil-slider-btn-next mil-revi-next" (click)="nextSolution()" [class.unable]="currentIndex === (solutions.length - solutionsToShow)">
+                            <span class="mil-h6">Next</span><i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="swiper-container mil-revi-slider mil-mb-30">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" *ngFor="let solutions of  solutions.slice(currentIndex, currentIndex + solutionsToShow); let i = index">
+
+                    <div class="mil-hover-card">
+                        <div class="mil-deco mil-deco-accent" style="top: -10%; right: -10%;"></div>
+                        <div class="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-30">
+                            <h3></h3>
+                            <img src="{{ solutions.imageSrc}}" alt="Customized Database Solutions icon">
+                        </div>
+                        <p class=" justify-text">
+                            {{ solutions.description }}
+                        </p>
+                        <h6 class="mil-mb-30">{{ solutions.title }}</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

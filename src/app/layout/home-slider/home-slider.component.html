@@ -1,1 +1,51 @@
-<div>Slider Works</div>
+<!-- banner start -->
+<div class="container1">
+    <div id="slide">
+     <div class="item" style="background-image:linear-gradient(rgba(22, 22, 22, 33%),rgba(0, 0, 0, 0.8)) , url(assets/img/slider/03.jpg);">
+            <div class="content">
+                <div class="name">Cloud Services</div>
+                <div class="des">With a focus on security, reliability, and cost-efficiency, our Cloud Services empower your organization to innovate, increase agility, and streamline operations.</div>
+                <button><a routerLink="/services/cloud-services">Explore</a></button>
+            </div>
+        </div>
+        <div class="item" style="background-image:linear-gradient(rgba(22, 22, 22, 33%),rgba(0, 0, 0, 0.8)) , url(assets/img/slider/005.png);">
+            <div class="content">
+                <div class="name">Collaboration Platform</div>
+                <div class="des">Empowering seamless teamwork with SharePoint's centralized information sharing, custom workflows, and web applications. Supercharge productivity with Power Apps' user-friendly custom business applications, and gain data-driven insights through interactive visualizations with Power BI</div>
+                <button><a routerLink="/services/collaboration-services">Explore</a></button>
+            </div>
+        </div>
+        <div class="item" style="background-image: linear-gradient(rgba(22, 22, 22, 33%),rgba(0, 0, 0, 0.8)) , url(assets/img/slider/02.jpg);">
+            <!-- <p id="slide1">Backend Development</p> -->
+            <div class="content">
+                <div class="name">Backend Development</div>
+                <div class="des">Densible crafts robust backend frameworks for your web solutions, integrating server-side logic, database management, and APIs to enhance the efficiency and performance of your website or application.</div>
+                <button>
+                    <a routerLink="/services/backend-development-services">Explore</a>
+                    </button>
+            </div>
+        </div>
+        <div class="item" style=" background-image: linear-gradient(rgba(22, 22, 22, 33%),rgba(0, 0, 0, 0.8)) , url(assets/img/slider/011.jpg);">
+            <div class="content">
+                <div class="name">Front End Development</div>
+                <div class="des">
+                    Our front-end development services focus on creating engaging and user-friendly interfaces for web applications.We prioritize delivering seamless user experiences through responsive and intuitive designs that work across various devices.</div>
+                <button><a routerLink="/services/frontend-development-services">Explore</a></button>
+            </div>
+        </div>
+      
+        <div class="item" style="background-image:linear-gradient(rgba(22, 22, 22, 33%),rgba(0, 0, 0, 0.8)) , url(assets/img/slider/04.jpg);">
+            <div class="content">
+                <div class="name">Database Services</div>
+                <div class="des">Managing and optimizing databases to ensure efficient storage, retrieval, and organization of data, empowering seamless operations for your applications.</div>
+                <button><a routerLink="/services/database-services">Explore</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="buttons">
+        <button id="prev" (click)="prevSlide()"><i class="fa-solid fa-angle-left"></i></button>
+        <button id="next" (click)="nextSlide()"><i class="fa-solid fa-angle-right"></i></button>
+    </div>
+</div> 
+
+ <!-- banner end -->

@@ -1,0 +1,53 @@
+<!-- projects.component.html -->
+<section class="mil-works mil-p-120-90">
+    <div class="mil-deco" style="top: 0; right: 40%;"></div>
+    <div class="container">
+      <div class="row align-items-center mil-mb-60-adapt">
+        <div class="col-md-6 col-xl-6">
+          <h2 class="mil-mb-30">Latest Projects</h2>
+        </div>
+        <div class="col-md-6 col-xl-6">
+          <div class="mil-adaptive-right">
+            <div class="mil-slider-nav mil-mb-30">
+              <div class="mil-slider-btn-prev mil-works-prev" (click)="prevProjects()">
+                <i class="fas fa-arrow-left"></i><span class="mil-h6">Prev</span>
+              </div>
+              <div class="mil-slider-btn-next mil-works-next" (click)="nextProjects()">
+                <span class="mil-h6">Next</span><i class="fas fa-arrow-right"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="swiper-container mil-works-slider mil-mb-project">
+        <div class="swiper-wrapper">
+          <!-- Project Container (Dynamically Generated for the Currently Displayed Projects) -->
+          <div class="swiper-slide project-container" *ngFor="let project of projects.slice(currentIndex, currentIndex + projectsToShow); let i = index">
+            <a href="#" class="mil-card">
+              <div class="mil-cover-frame">
+                <img [src]="project.imageSrc" [alt]="project.title" [title]="project.title">
+              </div>
+              <div class="mil-description">
+                <div class="mil-card-title">
+                  <h4 class="mil-mb-20">{{ project.title }}</h4>
+                  <p>{{ project.description }}</p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-center" style="padding-top: 75px;">
+        <div class="col-md-6 col-xl-6">
+          <a href="#" class="mil-link mil-mb-30"><span>View All Cases</span><i class="fas fa-arrow-right"></i></a>
+        </div>
+        <div class="col-md-6 col-xl-6">
+          <div class="mil-adaptive-right">
+            <a href="contact.html" class="mil-button mil-border mil-mb-30"><span>Get Started</span></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  

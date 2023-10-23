@@ -1,0 +1,47 @@
+<section class="mil-p-120-120">
+  <div class="mil-deco" style="top: 0; left: 15%;"></div>
+  <div class="container">
+
+    <div class="mil-text-center mil-mb-90">
+      <span class="mil-suptitle mil-suptitle-2 mil-mb-30">A Great Service</span>
+      <h2 class="mil-mb-30">Supercharge  <span class="mil-accent">Your Applications</span> With</h2>
+    </div>
+
+    <div class="mil-tab-buttons mil-tab-buttons-2 mil-mb-90">
+      <a (click)="setActiveTab('tab1')" [class.mil-active]="activeTab === 'tab1'">
+        <div>
+          <div class="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-15">
+            <img src="/assets/img/icons/md/20.svg" alt="Azure icon" title="Azure icon">
+          </div>
+          <h6>Azure</h6>
+        </div>
+      </a>
+      <a (click)="setActiveTab('tab2')" [class.mil-active]="activeTab === 'tab2'">
+        <div>
+          <div class="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-15">
+            <img src="/assets/img/icons/md/21.svg" alt="AWS icon" title="AWS icon">
+          </div>
+          <h6>AWS</h6>
+        </div>
+      </a>
+    </div>
+
+    <div class="swiper-container mil-tabs-slider">
+        <div class="swiper-slide" data-hash="tab1">
+          <div data-swiper-parallax-y="-100" data-swiper-parallax-opacity="0">
+            <p class="justify-text tabs2-p" *ngIf="activeTab === 'tab1'">
+              Harnessing the capabilities of Microsoft Azure, we offer a wide array of services tailored to your specific needs. Azure Functions and App Services enable the development of serverless applications and scalable APIs, ensuring optimal performance without the overhead of managing infrastructure. Azure Storage provides secure and scalable cloud storage options, allowing you to store and access data effortlessly. Event Grid enables real-time event processing and event-driven architectures, facilitating seamless communication between different components of your application. Our DevOps CI/CD services ensure efficient software delivery, automating the deployment pipeline and accelerating time-to-market with reliable and consistent releases.
+            </p>
+          </div>
+        </div>
+
+        <div class="swiper-slide" data-hash="tab2">
+          <div data-swiper-parallax-y="-100" data-swiper-parallax-opacity="0">
+            <p class="justify-text tabs2-p" *ngIf="activeTab === 'tab2'">
+              As an AWS partner, we bring the transformative power of Amazon Web Services to businesses seeking a competitive edge. AWS S3 offers secure, durable, and scalable object storage for various data types, simplifying data management and access. AWS Lambdas provide serverless computing, enabling the execution of code without the need to manage servers, optimizing costs and resource utilization. EventBus, or Amazon EventBridge, facilitates the integration of diverse AWS services, allowing applications to respond to events efficiently. With EC2 and ECS, we enable businesses to deploy and manage scalable, flexible, and highly available applications in the AWS cloud.
+            </p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>

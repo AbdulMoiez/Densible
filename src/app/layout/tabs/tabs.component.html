@@ -1,0 +1,5 @@
+<ul class="mil-tabs-left-nav mil-mb-60">
+    <li  *ngFor="let tab of tabsArray;let sr = index" (click)="setTab(sr)">
+      <a class="mil-h4 " [ngClass]="activatedTab == sr ? 'active': ''" >{{tab}}</a>
+    </li>
+  </ul>

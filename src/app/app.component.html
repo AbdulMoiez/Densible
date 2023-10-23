@@ -1,6 +1,8 @@
 <div class="mil-wrapper">
-    <app-layout-header></app-layout-header>
-    <app-layout-home-slider></app-layout-home-slider>
+    <app-home-navbar *ngIf="isHomePage()"></app-home-navbar>
+    <app-default-navbar *ngIf="!isHomePage()"></app-default-navbar>
+    <app-layout-home-slider *ngIf="showSlider()"></app-layout-home-slider>
+    <app-tabs></app-tabs>
     <router-outlet></router-outlet>
     <app-footer-contact></app-footer-contact>
     <app-layout-footer></app-layout-footer>

@@ -1,0 +1,14 @@
+/* styles.css or review.component.css */
+.reviews-container {
+    display: flex;
+    flex-wrap: wrap; /* Wrap reviews to the next row if there's not enough space */
+    justify-content: space-between; /* Distribute space evenly between reviews */
+    margin: 0 -10px; /* Add negative margin to counteract the spacing between cards */
+  }
+  
+  .swiper-slide {
+    flex: 0 0 calc(34.5% - 20px); /* Each card takes 33.3333% of the container width with spacing */
+    margin: 0 10px; /* Add spacing between cards horizontally */
+    margin-bottom: 20px; /* Add spacing between cards vertically */
+  }
+  

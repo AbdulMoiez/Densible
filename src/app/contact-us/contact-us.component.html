@@ -1,0 +1,150 @@
+      <!-- banner -->
+      <div class="mil-banner-sm mil-deep-bg">
+        <img src="/assets/img/deco/map.png" alt="background map" title="background map" class="mil-background-image">
+        <div class="mil-deco mil-deco-accent" style="top: 47%; right: 10%; transform: rotate(90deg)"></div>
+        <div class="mil-banner-content">
+            <div class="container mil-relative">
+                <ul class="mil-breadcrumbs mil-mb-30">
+                    <li><a routerLink="/">Home</a></li>
+                    <li><a routerLink="contact-us">Contact Us</a></li>
+                </ul>
+                <h2 class="mil-uppercase">Let’s discuss your opportunity</h2>
+            </div>
+        </div>
+    </div>
+    <!-- banner end -->
+
+    <!-- contact -->
+    <section class="mil-contact mil-p-120-0">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-lg-8 col-xl-8 mil-mb-120">
+
+                    <form id="ContactUSForm"[formGroup]="ContactUSForm" (ngSubmit)="contactUSFormData()">
+
+                        <h4 class="mil-mb-60"><span class="mil-accent">01.</span> Tell Us About Yourself</h4>
+
+                        <div class="row">
+                            <div class="col-lg-6">
+
+                                <div class="mil-input-frame mil-dark-input mil-mb-30">
+                                    <label class="mil-h6 mil-dark"><span>First Name</span></label>
+                                    <input type="text" placeholder="John" name="firstName" id="firstName" formControlName="Fname">
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <div class="mil-input-frame mil-dark-input mil-mb-30">
+                                    <label class="mil-h6"><span>Last Name</span></label>
+                                    <input type="text" placeholder="Jones" name="lastName" id="lastName" formControlName="Lname">
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <div class="mil-input-frame mil-dark-input mil-mb-30">
+                                    <label class="mil-h6"><span>Email Address</span></label>
+                                    <input type="email" placeholder="doe@mydomain.com" name="email" id="email" formControlName="email">
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+
+                                <div class="mil-input-frame mil-dark-input mil-mb-30">
+                                    <label class="mil-h6"><span>Phone</span></label>
+                                    <input type="number" placeholder="Enter your phone number" name="phoneNumber" id="phone" formControlName="phone">
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6">
+
+
+                                <div class="mil-input-frame mil-dark-input mil-mb-30">
+                                    <label class="mil-h6 mil-dark"><span>Company</span></label>
+                                    <input type="text" placeholder="Your company name" name="companyName" id="companyName" formControlName="company">
+                                </div>
+
+                            </div>
+                            <div class="col-lg-6 mil-mb-30">
+
+                                <div class="mil-input-frame mil-dark-input mil-mb-30">
+                                    <label class="mil-h6 mil-dark"><span>Role</span></label>
+                                    <input type="text" placeholder="Your role" name="designation" id="role" formControlName="role">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <h4 class="mil-mb-60"><span class="mil-accent">02.</span> What Can We Help You With?</h4>
+
+                        <div class="row">
+                            <div class="col-lg-6 mil-mb-30">
+
+                                <div class="mil-input-frame mil-dark-input mil-mb-30">
+                                    <label class="mil-h6 mil-dark"><span>Product Design</span></label>
+                                    <input type="text" placeholder="Web Designer" name="productDesign" id="productDesign" formControlName="productDesign">
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <h4 class="mil-mb-60"><span class="mil-accent">03.</span>  Tell Us About Your Project</h4>
+
+                        <div class="row">
+
+                            <div class="col-lg-12">
+
+                                <div class="mil-input-frame mil-dark-input mil-mb-30">
+                                    <label class="mil-h6"><span>Project Description</span></label>
+                                    <textarea placeholder="Your Message" class="mil-shortened" name="projectDescription" id="projectDescription" formControlName="projectDescription"></textarea>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-lg-12">
+
+                                <button  type="submit" class="mil-button mil-border mil-fw"><span>Submit Now</span></button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                </div>
+                <div class="col-lg-4 col-xl-3 mil-mb-120">
+
+                    <div class="mil-mb-60">
+                        <h5 class="mil-list-title mil-mb-30">Support Request</h5>
+                        <p class="mil-mb-20">Our experts are ready to answer your questions.</p>
+                        <a routerLink="contact-us" class="mil-link mil-link-sm"><span>Support Now</span><i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div class="mil-divider mil-mb-60"></div>
+
+                    <div class="mil-mb-60">
+                        <div class="mil-icon-frame mil-icon-frame-md mil-icon-bg mil-mb-30">
+                            <img src="/assets/img/icons/md/8.svg" alt="Need Help icon" title="Need Help icon">
+                        </div>
+                        <h5 class="mil-list-title mil-mb-30">Need Help?</h5>
+                        <p>For technical questions or billing questions, please contact Customer Care.</p>
+                    </div>
+
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact end -->
+
+    <!-- map -->
+    <div>
+        <div class="mil-map-frame">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3403.126730191302!2d74.2997472753942!3d31.465699849841403!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919015695632a2f%3A0x28b972ae156fbdf7!2sDensible!5e0!3m2!1sen!2s!4v1695292467782!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           
+    </div>
+        <div class="container"></div>
+    </div>
+    <!-- map end -->

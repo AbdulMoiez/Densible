@@ -1,0 +1,45 @@
+.navbar{
+  transition: background-color 0.3s ease-in-out;
+}
+.navbar-brand {
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-position: center;
+}
+
+.nav-link{
+    color: #fff !important;
+    font-family: Sora,sans-serif;
+    font-weight: 400;
+    margin-right: 50px;
+}
+.nav-link:hover{
+    color: #fd7e14 !important;
+}
+.dropdown-menu{
+  border:none !important;
+  padding: 1.5rem 37px 1.5rem 15px!important;
+}
+.dropdown-item{
+  padding: 0.5rem 1.5rem !important;
+}
+
+@media (max-width: 991px){
+  .nav-link{
+    color: #000 !important;
+    text-align: center !important;
+  }
+  .navbar{
+    background-color: #fff !important;
+  }
+  .navbar-brand{
+    background-image: url(/assets/img/logo/Densible-dark.png ) !important;
+  }
+}
