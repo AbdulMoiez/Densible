@@ -1,20 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { AboutUSComponent } from './about-us/about-us.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
-import { BackendDevelopmentServicesComponent } from './backend-development-services/backend-development-services.component';
-import { FrontendDevelopmentServicesComponent } from './frontend-development-services/frontend-development-services.component';
-import { CloudServicesComponent } from './cloud-services/cloud-services.component';
-import { DatabaseServicesComponent } from './database-services/database-services.component';
-import { CollaborationServicesComponent } from './collaboration-services/collaboration-services.component';
-import { TeamComponent } from './team/team.component';
-import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
-import { PrivacyPolicyComponent } from './privacy-policy/privacy-policy.component';
-import { BlogsComponent } from './blogs/blogs/blogs.component';
-import { BlogListComponent } from './blogs/blogs/list/list.component';
-import { BlogDocumentApprovalSpfxComponentComponent } from './blogs/blogs/document-approval-spfx-component/document-approval-spfx-component.component';
-import { TascusRestApiComponent } from './blogs/blogs/tascus-rest-api/tascus-rest-api.component';
+import { HomeComponent } from './Components/Pages/home/home.component';
+import { AboutUSComponent } from './Components/Pages/about-us/about-us.component';
+import { ContactUsComponent } from './Components/Pages/contact-us/contact-us.component';
+import { BackendDevelopmentServicesComponent } from './Components/Services/backend-development-services/backend-development-services.component';
+import { FrontendDevelopmentServicesComponent } from './Components/Services/frontend-development-services/frontend-development-services.component';
+import { CloudServicesComponent } from './Components/Services/cloud-services/cloud-services.component';
+import { DatabaseServicesComponent } from './Components/Services/database-services/database-services.component';
+import { CollaborationServicesComponent } from './Components/Services/collaboration-services/collaboration-services.component';
+import { TeamComponent } from './Components/Pages/team/team.component';
+import { TermsConditionsComponent } from './Components/Pages/terms-conditions/terms-conditions.component';
+import { PrivacyPolicyComponent } from './Components/Pages/privacy-policy/privacy-policy.component';
+import { BlogsComponent } from './Components/Pages/blogs/blogs/blogs.component';
+import { BlogListComponent } from './Components/Pages/blogs/blogs/list/list.component';
+import { BlogDocumentApprovalSpfxComponentComponent } from './Components/Pages/blogs/blogs/document-approval-spfx-component/document-approval-spfx-component.component';
+import { TascusRestApiComponent } from './Components/Pages/blogs/blogs/tascus-rest-api/tascus-rest-api.component';
 const routes: Routes = [
   {
     path: '',
