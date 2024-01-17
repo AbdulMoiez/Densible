@@ -1,31 +1,29 @@
-/* You can add global styles to this file, and also import other style files */
+
 
 ol,
 .blog_ul {
-
-    padding-left: 20px !important;
+  padding-left: 20px !important;
 }
 
 code {
-    background: #fcfcfc;
-    border: 1px solid #ddd;
-    border-left: 3px solid #f57c00;
-    color: #666;
-    page-break-inside: avoid;
-    font-family: monospace;
-    font-size: 15px;
-    line-height: 1.6;
-    margin-bottom: 1.6em;
-    max-width: 100%;
-    overflow: auto;
-    padding: 1em 1.5em;
-    display: block;
-    word-wrap: break-word;
+  background: #fcfcfc;
+  border: 1px solid #ddd;
+  border-left: 3px solid #f57c00;
+  color: #666;
+  page-break-inside: avoid;
+  font-family: monospace;
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 1.6em;
+  max-width: 100%;
+  overflow: auto;
+  padding: 1em 1.5em;
+  display: block;
+  word-wrap: break-word;
 }
 
-a:hover{
-    list-style: none;
-    text-decoration: none;
-    color: #f57c00;
+a:hover {
+  list-style: none;
+  text-decoration: none;
+  color: #f57c00;
 }
-

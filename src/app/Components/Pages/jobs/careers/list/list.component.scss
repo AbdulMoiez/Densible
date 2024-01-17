@@ -1,0 +1,11 @@
+.mil-card .mil-cover-frame img, .mil-card-2 .mil-cover-frame img {
+    
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    object-position: center;
+    transition: .4s cubic-bezier(0, 0, .3642, 1);
+}

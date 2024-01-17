@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './Components/Pages/home/home.component';
@@ -29,11 +30,22 @@ import { SolutionsSwiperComponent } from './Components/Shared/solutions-swiper/s
 import { Tabs2Component } from './Components/Shared/tabs2/tabs2.component';
 import { SolutionSwiperDatabaseComponent } from './Components/Shared/solution-swiper-database/solution-swiper-database.component';
 import { TascusRestApiComponent } from './Components/Pages/blogs/blogs/tascus-rest-api/tascus-rest-api.component';
-
+import { CareersComponent } from './Components/Pages/jobs/careers/careers.component';
+import { JobListComponent } from './Components/Pages/jobs/careers/list/list.component';
+import { BusinessDevelopmentExecutiveComponent } from './Components/Pages/jobs/careers/business-development-executive/business-development-executive.component';
+import { Page404Component } from './Components/Pages/page404/page404.component';
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment.development';
+import { BlogPostingComponent } from './Components/Shared/blog-posting/blog-posting.component';
+import { BlogShowComponent } from './Components/Shared/blog-show/blog-show.component';
+import { AdminPanelComponent } from './Components/Pages/admin-panel/admin-panel.component';
+import { NewBlogComponent } from './Components/Pages/new-blog/new-blog.component';
+import { FormsModule } from '@angular/forms';
+import { AngularEditorModule } from '@kolkov/angular-editor';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent, 
+    HomeComponent,
     FooterComponent,
     FooterContactComponent,
     HomeSliderComponent,
@@ -59,11 +71,23 @@ import { TascusRestApiComponent } from './Components/Pages/blogs/blogs/tascus-re
     Tabs2Component,
     SolutionSwiperDatabaseComponent,
     TascusRestApiComponent,
+    CareersComponent,
+    JobListComponent,
+    BusinessDevelopmentExecutiveComponent,
+    Page404Component,
+    BlogPostingComponent,
+    BlogShowComponent,
+    AdminPanelComponent,
+    NewBlogComponent,
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    FormsModule,
+    AngularEditorModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [],
   bootstrap: [AppComponent]

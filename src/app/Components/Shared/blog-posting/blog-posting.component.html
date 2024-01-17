@@ -1,0 +1,18 @@
+<!-- components/blog-list/blog-list.component.html -->
+<div *ngFor="let blog of blogs">
+  <!-- Display existing blogs -->
+  <div>{{ blog.Title }}</div>
+  <!-- Add other fields as needed -->
+</div>
+<!-- // TODO: Remove this -->
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea aliquam rem autem totam iusto commodi, debitis, expedita deserunt quo ab quam deleniti culpa dolore odio officia ducimus, sequi tempore quos?</p>
+<form [formGroup]="blogForm" >
+  <!-- Form for adding new blog entries -->
+  <input type="text" formControlName="Breadcrumb" placeholder="Breadcrumb" />
+  <input type="text" formControlName="Description" placeholder="Description" />
+  <input type="text" formControlName="Image" placeholder="Image URL" />
+  <input type="text" formControlName="Stack" placeholder="Stack" />
+  <input type="text" formControlName="Title" placeholder="Title" />
+
+  <button type="submit">Add Blog</button>
+</form>

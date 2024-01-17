@@ -1,0 +1,52 @@
+<!-- banner -->
+<div class="mil-banner-sm mil-deep-bg">
+    <img src="/assets/img/deco/map.png" alt="background map" class="mil-background-image">
+    <div class="mil-deco mil-deco-accent" style="top: 47%; right: 10%; transform: rotate(90deg)"></div>
+    <div class="mil-banner-content">
+        <div class="container mil-relative">
+            <ul class="mil-breadcrumbs mil-mb-30">
+                <li><a routerLink="/">Home</a></li>
+                <li><a routerLink="/careers">Careers</a></li>
+            </ul>
+            <h2 class="mil-uppercase">Invest in your career, Grow with <br> tech’s top talent.</h2> 
+        </div>
+    </div>
+</div>
+<!-- banner end -->
+
+<section class="mil-works mil-p-120-90">
+    <div class="mil-deco" style="top: 0; right: 40%;"></div>
+    <div class="container">
+        <h3 class="mil-text-center mil-mb-120">
+            <span class="mil-accent">Available</span>
+            Jobs
+        </h3>
+
+        <div class="row">
+            <div *ngFor="let job of Job1" class="col-lg-6 col-md-6 col-sm-8" >
+
+                <a [routerLink]="['/careers', job.link]" class="mil-card-2">
+                    <div class="mil-cover-frame">
+                        <img class="blog_img" [src]="job.image" alt="project">
+                    </div>
+                    <div class="mil-description">
+                        <ul class="mil-speakers">
+                            <li class="mil-speaker">
+                                <img [src]="job.image" alt="speaker">
+                            </li>
+                        </ul>
+                        <div class="mil-card-title">
+                            <p class="mil-category mil-text-sm mil-mb-15"> {{ job.type }} </p>
+                            <h4>{{ job.title }}</h4>
+                        </div>
+
+                    </div>
+                </a>
+
+            </div>
+            
+        </div>
+
+
+    </div>
+</section>

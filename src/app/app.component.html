@@ -1,9 +1,9 @@
 <div class="mil-wrapper">
     <app-home-navbar *ngIf="isHomePage()"></app-home-navbar>
-    <app-default-navbar *ngIf="!isHomePage()"></app-default-navbar>
+    <app-default-navbar *ngIf="!isHomePage()  &&  !isAdminPanel() "></app-default-navbar>
     <app-layout-home-slider *ngIf="showSlider()"></app-layout-home-slider>
     <app-tabs></app-tabs>
     <router-outlet></router-outlet>
-    <app-footer-contact></app-footer-contact>
-    <app-layout-footer></app-layout-footer>
+    <app-footer-contact *ngIf="!isCareersPage() && !isAdminPanel() && !isNewBlog() && !isNewBlogWithId()"></app-footer-contact>
+    <app-layout-footer *ngIf="!isAdminPanel()"></app-layout-footer>
 </div>

@@ -13,3 +13,9 @@
     transform: scale(1.05);
     filter: grayscale(0);
 }
+.mil-adaptive-center {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

@@ -37,6 +37,18 @@
             </div>
         </li>
         <li class="nav-item ">
+            <a class="nav-link" routerLink="/careers"
+                [style.color]="isScrolled || isMobile ? linkColorWhenScrolled : linkColorWhenNotScrolled"
+                #navLinkElement>Careers </a>
+        </li> 
+        <!-- // TODO: No need to show -->
+        <!-- // TODO: Make an array or component to reuseability -->
+        <!-- <li class="nav-item">
+            <a class="nav-link" routerLink="/admin"
+                [style.color]="isScrolled || isMobile ? linkColorWhenScrolled : linkColorWhenNotScrolled"
+                #navLinkElement>Admin </a>
+        </li> -->
+        <li class="nav-item ">
             <a class="nav-link" routerLink="/blogs"
                 [style.color]="isScrolled || isMobile ? linkColorWhenScrolled : linkColorWhenNotScrolled"
                 #navLinkElement>Blog </a>

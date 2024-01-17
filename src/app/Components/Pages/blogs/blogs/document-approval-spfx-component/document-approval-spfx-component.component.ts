@@ -1,7 +1,7 @@
 import { Component,OnInit } from '@angular/core';
 import { Meta, Title} from'@angular/platform-browser'
 
-
+// TODO: Remove Component
 @Component({
   selector: 'app-document-approval-spfx-component',
   templateUrl: './document-approval-spfx-component.component.html',
@@ -9,7 +9,7 @@ import { Meta, Title} from'@angular/platform-browser'
 })
 export class BlogDocumentApprovalSpfxComponentComponent implements OnInit {
   constructor(private meta: Meta, private titleService: Title) {}
-
+  
   Questions = [
     {
       question: "What does the Document Approval Field Customizer do?",
@@ -58,4 +58,6 @@ ngOnInit() {
   this.titleService.setTitle('Document Approval Workflows with Field Customization');
   this.meta.addTag({ name: 'description', content: "Streamlining Document Approval Workflows in SharePoint with Field Customization" });
 }
+// Getting Blogs Data
+
 }

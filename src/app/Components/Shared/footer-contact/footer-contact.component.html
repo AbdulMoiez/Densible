@@ -3,7 +3,7 @@
     <div class="mil-deco mil-deco-accent reveal fade-left" style="top: 0; right: -70%;"></div>
     <div class="container">
         <h2 class="mil-light mil-mb-90 marginTop">Contact <span class="mil-accent">Us</span></h2>
-        <form id="contactForm"[formGroup]="contactForm"  (ngSubmit) = "contactFormData()">
+        <form id="contactForm"[formGroup]="contactForm">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="mil-input-frame mil-mb-30">
@@ -38,19 +38,24 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <button class="mil-button mil-accent-bg mil-fw" type="submit"><span>Send Message
-                            Now</span></button>
+                    <button  class="mil-button mil-accent-bg mil-fw" type="submit" (click)="contactFormData()">
+                        <span *ngIf="!isLoading ">Send Message Now</span>
+                            <span *ngIf="isLoading"><i class="fas fa-spinner fa-spin"></i>
+                            </span>
+                        </button>
                 </div>
             </div>
         </form>
     </div>
 </section>
 <!-- contact end -->
-<!-- Toast Message for Contact form Start -->
-<div id="toast">
-    <div id="img" style="padding-top: 9px; padding-bottom: 0px;"><img id="toast-icon"
-            src="/assets/img/icons/md/Logo icon orange 32.png" alt=" Densible Logo icon" title="Densible Logo icon"
-            srcset=""></div>
-    <div id="desc"></div>
+  <!-- Toast Message -->
+  <div id="toast" *ngIf="showToast" class="show">
+    <div id="img" style="padding-top: 9px; padding-bottom: 0px;">
+        <!-- // TODO: Remove spaces from file name -->
+        <img id="toast-icon" src="../../../../../../assets/img/icons/md/Logo icon orange 32.png"
+            alt="Densible Logo icon" title="Densible Logo icon" srcset="">
+    </div>
+    <div id="desc">{{ toastMessage }}</div>
 </div>
 <!-- Toast Message for Contact form End-->

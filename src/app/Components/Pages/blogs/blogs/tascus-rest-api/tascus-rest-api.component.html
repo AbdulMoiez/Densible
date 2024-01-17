@@ -1,4 +1,5 @@
 <!-- banner -->
+<!-- // TODO: Remove Component -->
 <div class="mil-banner-sm mil-deep-bg">
     <img src="/assets/img/deco/map.png" alt="background map" class="mil-background-image">
     <div class="mil-deco mil-deco-accent" style="top: 47%; right: 10%; transform: rotate(90deg)"></div>
@@ -40,262 +41,262 @@
                     <li>03 Oct. 2023</li>
                     <li>13 min read</li>
                 </ul>
-                <div class="mil-divider mil-mb-20"></div>
-                <p class="justify-text mil-mb-20">
-                    In the world of software development, creating a well-structured and maintainable codebase is
-                    crucial. One architectural pattern that has gained popularity for building such applications is the
-                    Onion Architecture. In this blog post, we will explore how to build a RESTful API using ASP.NET Core
-                    and Entity Framework Core, following the Onion Architecture principles. We'll also provide a
-                    step-by-step guide on setting up the project and using it effectively.</p>
-                <div class="mil-divider mil-mb-20"></div>
-                <h4 class="mil-mb-10">What is Onion Architecture?</h4>
-                <p class="justify-text">
-                    Onion Architecture is an architectural pattern that promotes a clear separation of concerns and
-                    dependencies within a software application. It encourages a layered approach to building
-                    applications where each layer has a specific responsibility. The core idea is to place the business
-                    logic and domain model at the center, surrounded by various layers representing different concerns.
-                    <br>
-                    In our project, we have the following directory structure:
-                </p>
-                <ul class="mil-mb-20 blog_ul">
-                    <li>Tascus.Api/</li>
-                    <li>Tascus.Core/</li>
-                    <li>Tascus.Repo/</li>
-                    <li>TascusTascus.Repo/</li>
-                    <li>Tascus.Test/</li>                    
-                    <li>.gitignore</li>                    
-                    <li>Tascus.sln</li>
-                </ul>
-                <div class="mil-divider mil-mb-20"></div>
-                <h4 class="mil-mb-10">Shining Bright: Standout Features</h4>
-                <p class="justify-text">
-                    The TASCUS REST API Project boasts an impressive array of features that catapult it to the forefront
-                    of data management tools. Here's a look at what makes it shine:
-                </p>
+                    <div class="mil-divider mil-mb-20"></div>
+                    <p class="justify-text mil-mb-20">
+                        In the world of software development, creating a well-structured and maintainable codebase is
+                        crucial. One architectural pattern that has gained popularity for building such applications is the
+                        Onion Architecture. In this blog post, we will explore how to build a RESTful API using ASP.NET Core
+                        and Entity Framework Core, following the Onion Architecture principles. We'll also provide a
+                        step-by-step guide on setting up the project and using it effectively.</p>
+                    <div class="mil-divider mil-mb-20"></div>
+                    <h4 class="mil-mb-10">What is Onion Architecture?</h4>
+                    <p class="justify-text">
+                        Onion Architecture is an architectural pattern that promotes a clear separation of concerns and
+                        dependencies within a software application. It encourages a layered approach to building
+                        applications where each layer has a specific responsibility. The core idea is to place the business
+                        logic and domain model at the center, surrounded by various layers representing different concerns.
+                        <br>
+                        In our project, we have the following directory structure:
+                    </p>
+                    <ul class="mil-mb-20 blog_ul">
+                        <li>Tascus.Api/</li>
+                        <li>Tascus.Core/</li>
+                        <li>Tascus.Repo/</li>
+                        <li>TascusTascus.Repo/</li>
+                        <li>Tascus.Test/</li>                    
+                        <li>.gitignore</li>                    
+                        <li>Tascus.sln</li>
+                    </ul>
+                    <div class="mil-divider mil-mb-20"></div>
+                    <h4 class="mil-mb-10">Shining Bright: Standout Features</h4>
+                    <p class="justify-text">
+                        The TASCUS REST API Project boasts an impressive array of features that catapult it to the forefront
+                        of data management tools. Here's a look at what makes it shine:
+                    </p>
 
-                <ol class="mil-mb-20">
-                    <li><strong>Real-Time Data Synchronization</strong>: Ensuring users always have access to the most
-                        up-to-date information, this feature fosters smarter decision-making and agility.</li>
+                    <ol class="mil-mb-20">
+                        <li><strong>Real-Time Data Synchronization</strong>: Ensuring users always have access to the most
+                            up-to-date information, this feature fosters smarter decision-making and agility.</li>
 
-                    <li><strong>Customizable Widgets</strong>: TASCUS empowers users to craft personalized dashboards,
-                        tailoring their experience with a variety of widgets, making it a versatile tool for individuals
-                        and businesses alike.</li>
+                        <li><strong>Customizable Widgets</strong>: TASCUS empowers users to craft personalized dashboards,
+                            tailoring their experience with a variety of widgets, making it a versatile tool for individuals
+                            and businesses alike.</li>
 
-                    <li><strong>Scalability</strong>: Designed to grow seamlessly alongside your business, TASCUS adapts
-                        to your evolving needs, ensuring you're always equipped for success.
-                    </li>
+                        <li><strong>Scalability</strong>: Designed to grow seamlessly alongside your business, TASCUS adapts
+                            to your evolving needs, ensuring you're always equipped for success.
+                        </li>
 
-                    <li><strong>User-Friendly Interface</strong>: The sleek and intuitive interface ensures that users,
-                        regardless of their technical expertise, can navigate and leverage the platform effortlessly.
-                    </li>
-                </ol>
-                <div class="mil-divider mil-mb-20"></div>
-                <h4 class="mil-mb-10">Powering the Magic: Technology Stack</h4>
-                <p>Beneath its user-friendly facade, the TASCUS REST API Project relies on a robust technology stack,
-                    equipping it to deliver exceptional performance. Here are the key components of this technological
-                    marvel:
-                </p>
-                <ul class="mil-mb-20 blog_ul">
-                    <li><strong>ASP.NET Core Web API</strong>: Serving as the backbone of the project, ASP.NET Core Web API provides a robust and scalable framework for building high-performance web applications and APIs</li>
-                    <li><strong>Entity Framework Core</strong>:  This powerful ORM (Object-Relational Mapping) framework simplifies database interactions, enabling seamless communication between the application and the underlying database.</li>
-                    <li><strong>C#</strong>: The versatile and expressive C# programming language provides the building blocks for the project, ensuring efficient and reliable code execution.
-                    </li>
-                    
-                </ul>
-                <div class="mil-divider mil-mb-20"></div>
-                <h4 class="mil-mb-10">Preparing for Success: Prerequisites</h4>
-                <p>Before we dive into the architecture and code, let's set up the project. 
-                    The following steps will guide you through the process:</p>
+                        <li><strong>User-Friendly Interface</strong>: The sleek and intuitive interface ensures that users,
+                            regardless of their technical expertise, can navigate and leverage the platform effortlessly.
+                        </li>
+                    </ol>
+                    <div class="mil-divider mil-mb-20"></div>
+                    <h4 class="mil-mb-10">Powering the Magic: Technology Stack</h4>
+                    <p>Beneath its user-friendly facade, the TASCUS REST API Project relies on a robust technology stack,
+                        equipping it to deliver exceptional performance. Here are the key components of this technological
+                        marvel:
+                    </p>
+                    <ul class="mil-mb-20 blog_ul">
+                        <li><strong>ASP.NET Core Web API</strong>: Serving as the backbone of the project, ASP.NET Core Web API provides a robust and scalable framework for building high-performance web applications and APIs</li>
+                        <li><strong>Entity Framework Core</strong>:  This powerful ORM (Object-Relational Mapping) framework simplifies database interactions, enabling seamless communication between the application and the underlying database.</li>
+                        <li><strong>C#</strong>: The versatile and expressive C# programming language provides the building blocks for the project, ensuring efficient and reliable code execution.
+                        </li>
+                        
+                    </ul>
+                    <div class="mil-divider mil-mb-20"></div>
+                    <h4 class="mil-mb-10">Preparing for Success: Prerequisites</h4>
+                    <p>Before we dive into the architecture and code, let's set up the project. 
+                        The following steps will guide you through the process:</p>
 
-                <ul class="mil-mb-20 blog_ul">
-                    
-                    <li><strong>Install .NET Core SDK</strong>: Make sure you have the .NET Core SDK installed on your machine. You can download it from the official .NET website.</li>
-                    <li><strong>Install SQL Server</strong>: Install and configure SQL Server on your system. You will need it for the database operations.
-                    </li>
-                </ul>
-                <div class="mil-divider mil-mb-20"></div>
+                    <ul class="mil-mb-20 blog_ul">
+                        
+                        <li><strong>Install .NET Core SDK</strong>: Make sure you have the .NET Core SDK installed on your machine. You can download it from the official .NET website.</li>
+                        <li><strong>Install SQL Server</strong>: Install and configure SQL Server on your system. You will need it for the database operations.
+                        </li>
+                    </ul>
+                    <div class="mil-divider mil-mb-20"></div>
 
-               
-                <h4 class="mil-mb-10">Getting Hands-On: Running Locally</h4>
-               
-                <ol class="mil-mb-20">
-                    <li>
-                        Clone this repository: <br>
-                        <p>Start by cloning the project repository from GitHub. Use the following command:</p>
-                        <code>
-                            git clone https://github.com/mujassir/tascus-api.git
-                        </code>
-                    </li>
-                    <li>
-                        Navigate to the Project Directory <br>
-                        <code>
-                            cd Tascus.Api
-                        </code>
-                    </li>
-                    <li>
-                        Update the Connection String <br>
-                        <p>The heart of any database-driven application is the connection string.
-                             To ensure that your application communicates with the database correctly, 
-                             follow these steps:
-                            </p>
-                            <ul>
-                                <li>Open the appsettings.json file located at the root of the project.</li>
-                                <li>Locate the following line:</li>
-                                
-                            </ul>
+                
+                    <h4 class="mil-mb-10">Getting Hands-On: Running Locally</h4>
+                
+                    <ol class="mil-mb-20">
+                        <li>
+                            Clone this repository: <br>
+                            <p>Start by cloning the project repository from GitHub. Use the following command:</p>
                             <code>
-                                <pre>{{ htmlForServerConfiguration}}</pre>
+                                git clone https://github.com/mujassir/tascus-api.git
                             </code>
+                        </li>
+                        <li>
+                            Navigate to the Project Directory <br>
+                            <code>
+                                cd Tascus.Api
+                            </code>
+                        </li>
+                        <li>
+                            Update the Connection String <br>
+                            <p>The heart of any database-driven application is the connection string.
+                                To ensure that your application communicates with the database correctly, 
+                                follow these steps:
+                                </p>
+                                <ul>
+                                    <li>Open the appsettings.json file located at the root of the project.</li>
+                                    <li>Locate the following line:</li>
+                                    
+                                </ul>
+                                <code>
+                                    <pre>{{ htmlForServerConfiguration}}</pre>
+                                </code>
+                                <ul>
+                                    <li>
+                                        Replace the placeholders (your_server, your_database, your_username, your_password) with your actual SQL Server connection details.
+
+                                    </li>
+                                </ul>
+                        </li>
+                        <li>
+                            Build and Run the Application
+                            You can build and run the application using either Visual Studio or the command line. Here's how to do it with the command line:
                             <ul>
                                 <li>
-                                    Replace the placeholders (your_server, your_database, your_username, your_password) with your actual SQL Server connection details.
-
+                                    Build the application:
+                                    <code>dotnet build</code>
+                                </li>
+                                <li>
+                                    Run the application:
+                                    <code>dotnet run</code>
                                 </li>
                             </ul>
-                    </li>
-                    <li>
-                        Build and Run the Application
-                        You can build and run the application using either Visual Studio or the command line. Here's how to do it with the command line:
-                        <ul>
-                            <li>
-                                Build the application:
-                                <code>dotnet build</code>
-                            </li>
-                            <li>
-                                Run the application:
-                                <code>dotnet run</code>
-                            </li>
-                        </ul>
-                        
-                    </li>
-                    <li>
-                        Access the Application <br>
-                        Once the application is running, you can access it through the following base URL:
-                        <code>
-                            https://localhost:7084
-                        </code>
-                    </li>
-                </ol>
-                <div class="mil-divider mil-mb-20"></div>
-                <h4 class="mil-mb-10">Understanding the Architecture</h4>
+                            
+                        </li>
+                        <li>
+                            Access the Application <br>
+                            Once the application is running, you can access it through the following base URL:
+                            <code>
+                                https://localhost:7084
+                            </code>
+                        </li>
+                    </ol>
+                    <div class="mil-divider mil-mb-20"></div>
+                    <h4 class="mil-mb-10">Understanding the Architecture</h4>
 
-                <p class="justify-text mil-mb-10">
-                    Now that we have the project set up, let's dive into the Onion Architecture and understand how our project is structured.
-                </p>
-                <h5 class="mil-mb-10">Core Layer (Tascus.Core)</h5>
-                <p>The Core layer is at the center of the onion and contains the domain model, entities, and business logic. It defines the fundamental building blocks of the application without being dependent on any other layer.</p>
+                    <p class="justify-text mil-mb-10">
+                        Now that we have the project set up, let's dive into the Onion Architecture and understand how our project is structured.
+                    </p>
+                    <h5 class="mil-mb-10">Core Layer (Tascus.Core)</h5>
+                    <p>The Core layer is at the center of the onion and contains the domain model, entities, and business logic. It defines the fundamental building blocks of the application without being dependent on any other layer.</p>
+                    
+                    <h5 class="mil-mb-10">Repository Layer (Tascus.Repo)</h5>
+                    <p>The Repository layer is responsible for data access and persistence. It contains database-specific code and interacts with Entity Framework Core to perform CRUD (Create, Read, Update, Delete) operations.</p>
                 
-                <h5 class="mil-mb-10">Repository Layer (Tascus.Repo)</h5>
-                <p>The Repository layer is responsible for data access and persistence. It contains database-specific code and interacts with Entity Framework Core to perform CRUD (Create, Read, Update, Delete) operations.</p>
-               
 
-                <h5 class="mil-mb-10">
-                    Service Layer (Tascus.Service)
-                </h5>
-                <p>The Service layer acts as a bridge between the Core and Repository layers. It contains application-specific logic and orchestrates interactions between different parts of the application. This layer is responsible for implementing business rules and workflows.</p>
-               
+                    <h5 class="mil-mb-10">
+                        Service Layer (Tascus.Service)
+                    </h5>
+                    <p>The Service layer acts as a bridge between the Core and Repository layers. It contains application-specific logic and orchestrates interactions between different parts of the application. This layer is responsible for implementing business rules and workflows.</p>
+                
 
-                <h5 class="mil-mb-10">API Layer (Tascus.Api)</h5>
-                <p>
-                    The API layer is the outermost layer and serves as the entry point for external clients. It exposes RESTful API endpoints that clients can consume. This layer is responsible for handling HTTP requests, validation, and mapping between DTOs (Data Transfer Objects) and domain entities
-                </p>
-               
-                <h5 class="mil-mb-10">Testing Layer (Tascus.Test)</h5>
-                <p>The Testing layer contains unit tests and integration tests to ensure the reliability and correctness of the application. It's crucial for maintaining the quality of the codebase.</p>
+                    <h5 class="mil-mb-10">API Layer (Tascus.Api)</h5>
+                    <p>
+                        The API layer is the outermost layer and serves as the entry point for external clients. It exposes RESTful API endpoints that clients can consume. This layer is responsible for handling HTTP requests, validation, and mapping between DTOs (Data Transfer Objects) and domain entities
+                    </p>
+                
+                    <h5 class="mil-mb-10">Testing Layer (Tascus.Test)</h5>
+                    <p>The Testing layer contains unit tests and integration tests to ensure the reliability and correctness of the application. It's crucial for maintaining the quality of the codebase.</p>
 
-                <h5 class="mil-mb-10">Exploring the APIs</h5>
-                <p>The TASCUS API offers several endpoints for managing product results and statuses. Let's take a closer look at these endpoints:</p>
+                    <h5 class="mil-mb-10">Exploring the APIs</h5>
+                    <p>The TASCUS API offers several endpoints for managing product results and statuses. Let's take a closer look at these endpoints:</p>
 
-                <h5 class="mil-mb-10">ProductResult</h5>
-                <h5>Get <span class="bg-sliver">/ProductResults</span></h5>
-                <ul class="mil-mb-20 blog_ul">
-                    <li><strong>Purpose</strong>: This endpoint returns production step results for a product.</li>
-                    <li><strong>Example Request</strong>: <span class="bg-sliver">https://localhost:7084/ProductResults? <br>Part_Number=G090L&Serial_Number=0021116&Operation_ID=1000</span></li>
-                    <li><strong>Response</strong>: <code>
-                        <pre>
-                            {{htmlForResponse1}}
-                        </pre>
-                    </code> </li>
-                </ul>
-
-                <h5>POST <span class="bg-sliver">/ProductResults</span></h5>
-                <ul class="mil-mb-20 blog_ul">
-                    <li><strong>Purpose</strong>: Use this endpoint to add production step results for a product.</li>
-                    <li><strong>Example Request Body</strong>: <code>
-                        <pre>
-                            {{htmlForResponse2}}
-                        </pre>
-                    </code> </li>
-                    <li><strong>Example Request Body</strong>: <code>
-                        <pre>
-                            {{htmlForResponse3}}
-                        </pre>
-                    </code> </li>
-                </ul>
-
-                <h5 class="mil-mb-10">ProductStatus</h5>
-                <h5>Get <span class="bg-sliver">/ProductStatus</span></h5>
-                <ul class="mil-mb-20 blog_ul">
-                    <li><strong>Purpose</strong>: Retrieve the status of a manufacturing operation for a product.</li>
-                    <li><strong>Example Request</strong>: <span class="bg-sliver">https://localhost:7084/ProductStatus? <br>Part_Number=G090L&Serial_Number=0021116&Operation_ID=1000</span></li>
-                    <li><strong>Response</strong>: <code>
-                        <pre>
-                            {{htmlForResponse4}}
-                        </pre>
-                    </code> </li>
-                </ul>
-
-                <h5>PUT <span class="bg-sliver">/ProductStatus</span></h5>
-                <ul class="mil-mb-20 blog_ul">
-                    <li><strong>Purpose</strong>: Update the result and status string for a product.</li>
-                    <li><strong>Request URL</strong>: <span class="bg-sliver">https://localhost:7084/ProductStatus? <br>Part_Number=G090L&Serial_Number=0021116&Operation_ID=1000</span></li>
-                    <li><strong>Example Request Body</strong>: <code>
-                        <pre>
-                            {{htmlForResponse5}}
-                        </pre>
-                    </code> </li>
-                </ul>
-
-
-                <h5 class="mil-mb-10">Using the Postman Collection</h5>
-                <p>
-                    <a href="https://www.postman.com/" target="_blank">Postman</a> is a versatile tool for API development and testing. The TASCUS project provides a Postman collection to streamline your testing efforts. Here's how to use it:
-                </p>
-                <h6>Prerequisites</h6>
-                <ol>
-                    <li><a href="https://www.postman.com/downloads/" target="_blank">Download and Install Postman</a></li>
-                </ol>
-
-                <h6>Steps</h6>
-                <ol>
-                    <li>Open Postman</li>
-                    <p>Launch the Postman application on your machine.</p>
-                    <li>Import the Collection
-                        <ul>
-                            <li>In the top-left corner of the Postman app, click the <span>Import</span> button.</li>
-                            <li>Choose the <span  class="bg-sliver">Upload Files</span> option and select the provided <span class="bg-sliver">.json</span>  Postman collection file.</li>
-                            <li>Click the <span class="bg-sliver">Import</span>  button in the dialog.</li>
-                        </ul>
-                    </li>
-                    <li>View the Collection</li>
-                    <p>After importing, you'll see the collection in the left sidebar under the Collections tab. Click on it to view the list of API requests included.</p>
-                    <li>Run a Request</li>
-                    <ul>
-                        <li>Click on one of the requests in the collection to load it.</li>
-                        <li>Adjust any necessary parameters, headers, or body data as needed.</li>
-                        <li>Click the blue <span class="bg-sliver">Send</span>  button to execute the request, and you'll see the response in the pane below.</li>
+                    <h5 class="mil-mb-10">ProductResult</h5>
+                    <h5>Get <span class="bg-sliver">/ProductResults</span></h5>
+                    <ul class="mil-mb-20 blog_ul">
+                        <li><strong>Purpose</strong>: This endpoint returns production step results for a product.</li>
+                        <li><strong>Example Request</strong>: <span class="bg-sliver">https://localhost:7084/ProductResults? <br>Part_Number=G090L&Serial_Number=0021116&Operation_ID=1000</span></li>
+                        <li><strong>Response</strong>: <code>
+                            <pre>
+                                {{htmlForResponse1}}
+                            </pre>
+                        </code> </li>
                     </ul>
-                    <li>Environment Variables (Optional)</li>
-                    <p>If the collection uses environment variables (like <span class="bg-sliver">{{htmlForSteps}}</span> ), you may need to set up or adjust an environment in Postman:</p>
-                </ol>
-                <p>
-                    <strong>Note:</strong>The provided Postman collection uses a placeholder {{htmlForSteps}}, which is set to https://localhost:7084. You should replace this placeholder with the actual base URL when making requests.
-                </p>
+
+                    <h5>POST <span class="bg-sliver">/ProductResults</span></h5>
+                    <ul class="mil-mb-20 blog_ul">
+                        <li><strong>Purpose</strong>: Use this endpoint to add production step results for a product.</li>
+                        <li><strong>Example Request Body</strong>: <code>
+                            <pre>
+                                {{htmlForResponse2}}
+                            </pre>
+                        </code> </li>
+                        <li><strong>Example Request Body</strong>: <code>
+                            <pre>
+                                {{htmlForResponse3}}
+                            </pre>
+                        </code> </li>
+                    </ul>
+
+                    <h5 class="mil-mb-10">ProductStatus</h5>
+                    <h5>Get <span class="bg-sliver">/ProductStatus</span></h5>
+                    <ul class="mil-mb-20 blog_ul">
+                        <li><strong>Purpose</strong>: Retrieve the status of a manufacturing operation for a product.</li>
+                        <li><strong>Example Request</strong>: <span class="bg-sliver">https://localhost:7084/ProductStatus? <br>Part_Number=G090L&Serial_Number=0021116&Operation_ID=1000</span></li>
+                        <li><strong>Response</strong>: <code>
+                            <pre>
+                                {{htmlForResponse4}}
+                            </pre>
+                        </code> </li>
+                    </ul>
+
+                    <h5>PUT <span class="bg-sliver">/ProductStatus</span></h5>
+                    <ul class="mil-mb-20 blog_ul">
+                        <li><strong>Purpose</strong>: Update the result and status string for a product.</li>
+                        <li><strong>Request URL</strong>: <span class="bg-sliver">https://localhost:7084/ProductStatus? <br>Part_Number=G090L&Serial_Number=0021116&Operation_ID=1000</span></li>
+                        <li><strong>Example Request Body</strong>: <code>
+                            <pre>
+                                {{htmlForResponse5}}
+                            </pre>
+                        </code> </li>
+                    </ul>
 
 
-                <h5  class="mil-mb-10">Conclusion</h5>
-                <p>In this blog post, we've explored how to build a robust REST API using <a href="https://dotnet.microsoft.com/en-us/apps/aspnet">ASP.NET</a> Core and Entity Framework Core, following the principles of Onion Architecture. We've provided a step-by-step guide to set up the project and explained the directory structure. Additionally, we've highlighted key API endpoints and demonstrated how to use the provided Postman collection for testing. This architecture promotes maintainability, scalability, and separation of concerns, making it a valuable choice for building complex applications</p>
-                <div class="mil-divider mil-mb-20"></div>
+                    <h5 class="mil-mb-10">Using the Postman Collection</h5>
+                    <p>
+                        <a href="https://www.postman.com/" target="_blank">Postman</a> is a versatile tool for API development and testing. The TASCUS project provides a Postman collection to streamline your testing efforts. Here's how to use it:
+                    </p>
+                    <h6>Prerequisites</h6>
+                    <ol>
+                        <li><a href="https://www.postman.com/downloads/" target="_blank">Download and Install Postman</a></li>
+                    </ol>
+
+                    <h6>Steps</h6>
+                    <ol>
+                        <li>Open Postman</li>
+                        <p>Launch the Postman application on your machine.</p>
+                        <li>Import the Collection
+                            <ul>
+                                <li>In the top-left corner of the Postman app, click the <span>Import</span> button.</li>
+                                <li>Choose the <span  class="bg-sliver">Upload Files</span> option and select the provided <span class="bg-sliver">.json</span>  Postman collection file.</li>
+                                <li>Click the <span class="bg-sliver">Import</span>  button in the dialog.</li>
+                            </ul>
+                        </li>
+                        <li>View the Collection</li>
+                        <p>After importing, you'll see the collection in the left sidebar under the Collections tab. Click on it to view the list of API requests included.</p>
+                        <li>Run a Request</li>
+                        <ul>
+                            <li>Click on one of the requests in the collection to load it.</li>
+                            <li>Adjust any necessary parameters, headers, or body data as needed.</li>
+                            <li>Click the blue <span class="bg-sliver">Send</span>  button to execute the request, and you'll see the response in the pane below.</li>
+                        </ul>
+                        <li>Environment Variables (Optional)</li>
+                        <p>If the collection uses environment variables (like <span class="bg-sliver">{{htmlForSteps}}</span> ), you may need to set up or adjust an environment in Postman:</p>
+                    </ol>
+                    <p>
+                        <strong>Note:</strong>The provided Postman collection uses a placeholder {{htmlForSteps}}, which is set to https://localhost:7084. You should replace this placeholder with the actual base URL when making requests.
+                    </p>
+
+
+                    <h5  class="mil-mb-10">Conclusion</h5>
+                    <p>In this blog post, we've explored how to build a robust REST API using <a href="https://dotnet.microsoft.com/en-us/apps/aspnet">ASP.NET</a> Core and Entity Framework Core, following the principles of Onion Architecture. We've provided a step-by-step guide to set up the project and explained the directory structure. Additionally, we've highlighted key API endpoints and demonstrated how to use the provided Postman collection for testing. This architecture promotes maintainability, scalability, and separation of concerns, making it a valuable choice for building complex applications</p>
+                    <div class="mil-divider mil-mb-20"></div>
                 <h3 class="mil-mb-10">Frequently Asked Questions (FAQ)</h3>
                 <ng-container *ngFor="let ques of Questions">
                     <div class="mil-accordion">
