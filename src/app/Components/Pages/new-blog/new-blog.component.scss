@@ -26,4 +26,48 @@
     font-size: 18px;
     float: right;
   }
+  // tags style
+
+  .tags-input {
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
   
+      li {
+        background-color: #F37C20;
+        color: #fff;
+        padding: 0.5em;
+        margin: 0.5em;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 150px;
+  
+        button.remove-tag {
+          background-color: #000;
+          color: #fff;
+          border: none;
+          padding: 0.2em 0.5em;
+          margin-left: 0.5em;
+          cursor: pointer;
+          border-radius: 3px;
+  
+          &:hover {
+            background-color: #000;
+          }
+        }
+      }
+    }
+  
+    // input[type="text"] {
+    //   padding: 0.5em;
+    //   border: 1px solid #ccc;
+    //   border-radius: 3px;
+    //   margin-top: 0.5em;
+    //   margin-bottom: 0.5em;
+    // }
+  }

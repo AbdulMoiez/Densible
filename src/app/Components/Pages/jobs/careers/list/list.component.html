@@ -23,7 +23,7 @@
         </h3>
 
         <div class="row">
-            <div *ngFor="let job of Job1" class="col-lg-6 col-md-6 col-sm-8" >
+            <div *ngFor="let job of Job1" class="col-lg-4 col-md-4 col-sm-6" >
 
                 <a [routerLink]="['/careers', job.link]" class="mil-card-2">
                     <div class="mil-cover-frame">
@@ -38,13 +38,15 @@
                         <div class="mil-card-title">
                             <p class="mil-category mil-text-sm mil-mb-15"> {{ job.type }} </p>
                             <h4>{{ job.title }}</h4>
+                            <p >{{ job.desc }} <span class="mil-category mil-text-sm mil-mb-15"> see more</span></p>
                         </div>
+                        
 
                     </div>
                 </a>
 
             </div>
-            
+           
         </div>
 
 

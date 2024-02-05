@@ -7,6 +7,7 @@ export interface Blog {
     Title: string;
   }
   export interface Blogs {
+    payload: any;
     id:string;
     breadcrumb: string;
     description: string;
@@ -15,4 +16,9 @@ export interface Blog {
     title: string;
     author:string;
     date:string;
+    authorPic:string;
+    authorPicUrl:string;
+    blogImageUrl:string;
+    tags:string;
+    allTags:string
   }

@@ -1,6 +1,5 @@
-
-   <!-- BlogForm start -->
-   <section class="mil-contact mil-p-120-0">
+<!-- BlogForm start -->
+<section class="mil-contact mil-p-120-0">
     <div class="container">
         <div class="row justify-content-between">
             <div class="col-lg-8 col-xl-8 mil-mb-120">
@@ -12,28 +11,40 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <div class="mil-input-frame mil-dark-input mil-mb-30">
-                                
+
                                 <label class="mil-h6 mil-dark" for="author"><span>Author:</span></label>
                                 <input type="text" id="author" name="author" formControlName="author" required>
                             </div>
-                            
+
+
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="mil-input-frame mil-dark-input mil-mb-30">
+
+                                <label class="mil-h6 mil-dark" for="authorPic"><span>Profile Pic:</span></label>
+                                <input type="file" id="authorPic" name="authorPic" formControlName="authorPic"
+                                    accept="*.png.jpg" required (change)="PicUpload($event)" #authorPicInput>
+
+                            </div>
+
 
                         </div>
                         <div class="col-lg-6">
 
                             <div class="mil-input-frame mil-dark-input mil-mb-30">
-                                
+
                                 <label class="mil-h6 mil-dark" for="breadcrumb"><span>Breadcrumb:</span></label>
-                                <input type="text" id="breadcrumb" name="breadcrumb" formControlName="breadcrumb" required>
+                                <input type="text" id="breadcrumb" name="breadcrumb" formControlName="breadcrumb"
+                                    required>
                             </div>
 
                         </div>
                         <div class="col-lg-6">
 
                             <div class="mil-input-frame mil-dark-input mil-mb-30">
-                                
-                                <label class="mil-h6"for="title"><span>Title:</span></label>
-                                 <input type="text" id="title" name="title" formControlName="title" required>
+
+                                <label class="mil-h6" for="title"><span>Title:</span></label>
+                                <input type="text" id="title" name="title" formControlName="title" required>
                             </div>
 
                         </div>
@@ -41,23 +52,40 @@
 
                             <div class="mil-input-frame mil-dark-input mil-mb-30">
                                 <div class="mil-input-frame mil-dark-input mil-mb-30">
-                                
+
                                     <label class="mil-h6" for="stack"><span>Stack:</span></label>
                                     <input type="text" id="stack" name="stack" formControlName="stack" required>
                                 </div>
-                                
+
                             </div>
 
                         </div>
                         <div class="col-lg-6">
                             <div class="mil-input-frame mil-dark-input mil-mb-30">
-                            <label class="mil-h6" for="image"><span >Image URL:</span></label>
-                                <input type="text" id="image" name="image" formControlName="image" required>
+
+                                <label class="mil-h6 " for="image"><span>Blog Image</span></label>
+                                <input type="file" id="image" name="image" formControlName="image" accept="*.png.jpg"
+                                    required (change)="blogImageUpload($event)" #imageInput>
                             </div>
                         </div>
-                        
-                        
+
+                        <div class="col-lg-12">
+                            <div class="mil-input-frame mil-dark-input mil-mb-30 tags-input">
+                              <label class="mil-h6" for="tags"><span>Tags</span></label>
+                              <ul>
+                                <li *ngFor="let tag of existingTags; let i = index">
+                                  {{ tag }}
+                                  <button type="button" class="remove-tag" (click)="removeTag(i)">x</button>
+                                </li>
+                              </ul>
+                              <input type="text" id="tags" name="tags" formControlName="tags" (keydown)="addTag($event)"
+                                placeholder="Enter tag name" />
+                            </div>
+                          </div>
+                          
+
                     </div>
+
 
 
                     <h4 class="mil-mb-60"><span class="mil-accent">02.</span>Empower Your Thoughts,Unleashing Ideas</h4>
@@ -68,20 +96,20 @@
 
                             <div class="mil-input-frame mil-dark-input mil-mb-30">
                                 <label class="mil-h6"><span>Project Description</span></label>
-                                <angular-editor formControlName="description"[config]="editorConfig" ></angular-editor>
-                                
+                                <angular-editor formControlName="description" [config]="editorConfig"></angular-editor>
+
                             </div>
 
                         </div>
-                       
+
 
 
                         <div class="col-lg-12">
 
-                            <button  type="submit" class="mil-button mil-border mil-fw">
+                            <button type="submit" class="mil-button mil-border mil-fw" [disabled]="isLoading">
                                 <span *ngIf="!isLoading ">Submit Now</span>
-                        <span *ngIf="isLoading"><i class="fas fa-spinner fa-spin"></i>
-                        </span>
+                                <span *ngIf="isLoading"><i class="fas fa-spinner fa-spin"></i>
+                                </span>
                             </button>
 
                         </div>
@@ -89,22 +117,23 @@
                     </div>
 
                 </form>
-<!-- Toast Message -->
-<div id="toast" *ngIf="showToast" class="show">
-<div id="img" style="padding-top: 9px; padding-bottom: 0px;">
-    <img id="toast-icon" src="../../../../../../assets/img/icons/md/LogoIcon.png"
-        alt="Densible Logo icon" title="Densible Logo icon" srcset="">
-</div>
-<div id="desc">{{ toastMessage }}</div>
-</div>
-<!-- Toast Message for Contact form End-->
+                <!-- Toast Message -->
+                <div id="toast" *ngIf="showToast" class="show">
+                    <div id="img" style="padding-top: 9px; padding-bottom: 0px;">
+                        <img id="toast-icon" src="../../../../../../assets/img/icons/md/LogoIcon.png"
+                            alt="Densible Logo icon" title="Densible Logo icon" srcset="">
+                    </div>
+                    <div id="desc">{{ toastMessage }}</div>
+                </div>
+                <!-- Toast Message for Contact form End-->
             </div>
             <div class="col-lg-4 col-xl-3 mil-mb-120">
 
                 <div class="mil-mb-60">
                     <h5 class="mil-list-title mil-mb-30">Support Request</h5>
                     <p class="mil-mb-20">Our experts are ready to answer your questions.</p>
-                    <a routerLink="contact-us" class="mil-link mil-link-sm"><span>Support Now</span><i class="fas fa-arrow-right"></i></a>
+                    <a routerLink="/contact-us" class="mil-link mil-link-sm"><span>Support Now</span><i
+                            class="fas fa-arrow-right"></i></a>
                 </div>
 
                 <div class="mil-divider mil-mb-60"></div>
@@ -117,7 +146,7 @@
                     <p>For technical questions or billing questions, please contact Customer Care.</p>
                 </div>
 
-              
+
             </div>
         </div>
     </div>

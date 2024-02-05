@@ -14,38 +14,82 @@
 </div>
 <!-- banner end -->
 
-<section class="mil-works mil-p-120-90">
-    <div class="mil-deco" style="top: 0; right: 40%;"></div>
+
+
+<section class="mil-blog mil-mt-70-adapt">
     <div class="container">
-        <h3 class="mil-text-center mil-mb-120">
-            Empower your business with
-            <span class="mil-accent">cutting-edge technology</span>
-        </h3>
-       
-
-        <div class="row">
-                <div *ngFor="let blog of Blogs" class="col-lg-6 col-md-6 col-sm-8">
-                  <a [routerLink]="['/blogShow', blog.id]" class="mil-card-2">
-                    <div class="mil-cover-frame">
-                      <img class="blog_img" [src]="blog.image" alt="project">
+        <div class="row justify-content-between">
+            <div  class="col-lg-8 col-xl-6 mil-mb-120">
+               <div  class="container">
+                <div class="row justify-content-between">
+                    <div  class="col-lg-6 col-xl-6 mil-mb-120" *ngFor="let blog of (tagSelected ? blogsData : Blogs)">
+                        <a  [routerLink]="['/blogs/blogShow', blog.id]" class="mil-card-2">
+                            <div class="mil-cover-frame">
+                            <img class="blog_img" [src]="blog.blogImageUrl" alt="project">
+                            </div>
+                            <div class="mil-description">
+                                <ul class="mil-speakers">
+                                    <li class="mil-speaker">
+                                        <img [src]="blog.blogImageUrl" alt="speaker">
+                                    </li>
+                                </ul>
+                                <div class="mil-card-title">
+                                    <p class="mil-category mil-text-sm mil-mb-15"> {{ blog.stack }} </p>
+                                    <h4>{{ blog.breadcrumb }}</h4>
+                                </div>
+    
+                            </div>
+                        </a>
                     </div>
-                    <div class="mil-description">
-                        <ul class="mil-speakers">
-                            <li class="mil-speaker">
-                                <img [src]="blog.image" alt="speaker">
-                            </li>
-                        </ul>
-                        <div class="mil-card-title">
-                            <p class="mil-category mil-text-sm mil-mb-15"> {{ blog.stack }} </p>
-                            <h4>{{ blog.breadcrumb }}</h4>
-                        </div>
-
-                    </div>
-                  </a>
                 </div>
-              
+               </div>
+            </div>
+
+
+                
+
+            <div class="col-lg-4 col-xl-3 mil-mb-120">
+                <div class="mil-mb-60">
+                    <h5 class="mil-list-title mil-mb-30">About Densible</h5>
+                    <p class="mil-mb-30">Empowering businesses with innovative software solutions. Partner with us for
+                        digital transformation and success.</p>
+                    <a routerLink="/about-us" class="mil-post-sm mil-mb-15">
+                        <div class="mil-cover-frame"><img src="/assets/img/faces/mujassir.jpg" alt="cover"></div>
+                        <div class="mil-description">
+                            <h4 class="mil-font-3 mil-accent">Mujassir Nasir</h4>
+                            <p class="mil-text-sm">Co-Founder</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="mil-divider mil-mb-60"></div>
+                <div class="mil-mb-60">
+                    <h5 class="mil-list-title mil-mb-30">See Blog Through Tags</h5>
+                    <ul class="mil-tags">
+                        <li *ngIf="tagSelected">
+                            <a  class="tag-link" (click)="clearTagFilter()">See All Blogs</a>
+                          </li>
+                        <li *ngFor="let tag of tagsData">
+                          <a  class="tag-link" (click)="filterBlogsByTag(tag)">{{ tag }}</a>
+                        </li>
+                        
+                      </ul>
+                      
+                  </div>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                <div class="mil-divider mil-mb-60"></div>
+                <h5 class="mil-list-title mil-mb-30">Contact us</h5>
+                <p class="mil-mb-30">Our experts are ready to answer your questions.</p>
+                <a routerLink="/contact-us" class="mil-link mil-link-sm"><span>Send</span><i
+                        class="fas fa-arrow-right"></i></a>
+
+
+            </div>
         </div>
-
-
     </div>
 </section>

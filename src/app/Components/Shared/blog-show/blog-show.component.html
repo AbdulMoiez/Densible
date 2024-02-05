@@ -21,7 +21,7 @@
             <div class="col-lg-8 col-xl-8 mil-mb-120">
                 <!-- banner -->
                 <div>
-                    <img src="{{image}}" alt="{{breadcrumb}}"
+                    <img src="{{blogImageUrl}}" alt="{{breadcrumb}}"
                         style="width: 100%; margin-bottom: 20px;">
                     <div class="mil-banner-content">
 
@@ -35,7 +35,7 @@
                 <!-- TODO: remove static values -->
 
                 <ul class="mil-dot-list mil-post-info mil-text-sm mil-mb-60 blog_ul">
-                    <li class="mil-post-author"><img src="/assets/img/faces/usama.jpeg" alt="Author"><span>{{author}}</span>
+                    <li class="mil-post-author"><img src="{{authorPicUrl}}" alt="Author"><span>{{author}}</span>
                     </li>
                     <li>{{date}}</li>
                     <li>11 min read</li>
@@ -56,20 +56,15 @@
                         </div>
                     </a>
                 </div>
-                <!-- <div class="mil-divider mil-mb-60"></div>
-                <form class="mil-sidebar-input-frame mil-mb-60">
-                    <input type="text" class="mil-sidebar-input" placeholder="Search here...">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                </form> -->
                 <div class="mil-divider mil-mb-60"></div>
                 <div class="mil-mb-60">
                     <h5 class="mil-list-title mil-mb-30">Recent Posts</h5>
                   
                     <!-- Use *ngFor to iterate over the blogs array -->
                     <a *ngFor="let blog of Blogs" class="mil-post-sm mil-mb-15">
-                      <div class="mil-cover-frame"><img [src]="blog.image" alt="cover"></div>
+                      <div class="mil-cover-frame"><img [src]="blog.blogImageUrl" alt="cover"></div>
                       <div class="mil-description">
-                        <h6><a [routerLink]="['/blogShow', blog.id]">{{blog.title}}</a></h6>
+                        <h6><a [routerLink]="['/blogs/blogShow', blog.id]">{{blog.title}}</a></h6>
                       </div>
                     </a>
                   </div>
@@ -77,34 +72,24 @@
                 <div class="mil-mb-60">
                     <h5 class="mil-list-title mil-mb-30">Categories</h5>
                     <ul class="mil-hover-link-list ">
-                        <li>
-                            <a>Business</a>
+                        <li *ngFor="let blog of Blogs">
+                            <a>{{blog.stack}}</a>
                         </li>
-                        <li>
-                            <a>Design</a>
-                        </li>
-                        <li>
-                            <a>Development</a>
-                        </li>
-                        <li>
-                            <a>Management</a>
-                        </li>
-                        <li>
-                            <a>Software</a>
-                        </li>
+                        
                     </ul>
                 </div>
                 <div class="mil-divider mil-mb-60"></div>
                 <div class="mil-mb-60">
                     <h5 class="mil-list-title mil-mb-30">Tags</h5>
                     <ul class="mil-tags">
-                        <li><a>Business</a></li>
-                        <li><a>Design</a></li>
-                        <li><a>General</a></li>
-                        <li><a>Development</a></li>
-                        <li><a>Learning</a></li>
+                        <li *ngFor="let tag of tags.split(',')">
+                            <a href="#" class="tag-link">{{ tag.trim() }}</a>
+                          </li>
                     </ul>
-                </div>
+                  </div>
+                  
+                  
+                  
                 <div class="mil-divider mil-mb-60"></div>
                 <h5 class="mil-list-title mil-mb-30">Contact us</h5>
                 <p class="mil-mb-30">Our experts are ready to answer your questions.</p>

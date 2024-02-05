@@ -8,18 +8,14 @@ import { FrontendDevelopmentServicesComponent } from './Components/Services/fron
 import { CloudServicesComponent } from './Components/Services/cloud-services/cloud-services.component';
 import { DatabaseServicesComponent } from './Components/Services/database-services/database-services.component';
 import { CollaborationServicesComponent } from './Components/Services/collaboration-services/collaboration-services.component';
-// import {Page404Component} from  './Components/Pages/page404/page404.component'
 import { TeamComponent } from './Components/Pages/team/team.component';
 import { TermsConditionsComponent } from './Components/Pages/terms-conditions/terms-conditions.component';
 import { PrivacyPolicyComponent } from './Components/Pages/privacy-policy/privacy-policy.component';
 import { BlogsComponent } from './Components/Pages/blogs/blogs/blogs.component';
 import { BlogListComponent } from './Components/Pages/blogs/blogs/list/list.component';
-import { BlogDocumentApprovalSpfxComponentComponent } from './Components/Pages/blogs/blogs/document-approval-spfx-component/document-approval-spfx-component.component';
-import { TascusRestApiComponent } from './Components/Pages/blogs/blogs/tascus-rest-api/tascus-rest-api.component';
 import { CareersComponent } from './Components/Pages/jobs/careers/careers.component';
 import { JobListComponent } from './Components/Pages/jobs/careers/list/list.component';
 import { BusinessDevelopmentExecutiveComponent } from './Components/Pages/jobs/careers/business-development-executive/business-development-executive.component';
-import { BlogPostingComponent } from './Components/Shared/blog-posting/blog-posting.component';
 import { BlogShowComponent } from './Components/Shared/blog-show/blog-show.component';
 import { AdminPanelComponent } from './Components/Pages/admin-panel/admin-panel.component';
 import { NewBlogComponent } from './Components/Pages/new-blog/new-blog.component';
@@ -36,23 +32,35 @@ const routes: Routes = [
     path: 'contact-us',
     component: ContactUsComponent,
   },
-  {
-    path: 'blogShow/:id',
-    component: BlogShowComponent,
-  },
+ 
   {
     path: 'admin',
     component: AdminPanelComponent,
     // TODO: Add Blogs routes as children 
   },
   {
-    path: 'new-blog',
-    component: NewBlogComponent,
+    path:'blogs',
+    component:BlogListComponent
   },
   {
-    path: 'new-blog/:id',
-    component: NewBlogComponent,
-  },
+  path:'blogs',
+  children:[
+    {
+      path: 'new-blog',
+      component: NewBlogComponent,
+    },
+    {
+      path: 'new-blog/:id',
+      component: NewBlogComponent,
+    },
+    {
+      path: 'blogShow/:id',
+      component: BlogShowComponent,
+    },
+   
+  ],
+},
+  
   {
     path: 'services',
     children: [
@@ -91,21 +99,7 @@ const routes: Routes = [
     path: 'privacy-policy',
     component: PrivacyPolicyComponent,
   },
-  {
-    path: 'blogs',
-    component: BlogsComponent,
-    children: [
-      { path: '', component: BlogListComponent },
-      {
-        path: 'document-approval-spfx-component',
-        component: BlogDocumentApprovalSpfxComponentComponent,
-      },
-      {
-        path: 'tascus-api-project',
-        component: TascusRestApiComponent,
-      },
-    ],
-  },
+  
   {
     path: 'careers',
     component: CareersComponent,
@@ -117,10 +111,7 @@ const routes: Routes = [
       },
     ],
   },
-  {
-    path: 'UploadNewBlog',
-    component: BlogPostingComponent,
-  },
+ 
 ];
 
 @NgModule({

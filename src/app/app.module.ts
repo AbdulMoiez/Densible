@@ -22,26 +22,23 @@ import { PrivacyPolicyComponent } from './Components/Pages/privacy-policy/privac
 import { ReactiveFormsModule } from '@angular/forms';
 import { BlogsComponent } from './Components/Pages/blogs/blogs/blogs.component';
 import { BlogListComponent } from './Components/Pages/blogs/blogs/list/list.component';
-import { BlogDocumentApprovalSpfxComponentComponent } from './Components/Pages/blogs/blogs/document-approval-spfx-component/document-approval-spfx-component.component';
 import { TabsComponent } from './Components/Shared/tabs/tabs.component';
 import { ProjectsComponent } from './Components/Shared/projects/projects/projects.component';
 import { ReviewComponent } from './Components/Shared/review/review/review.component';
 import { SolutionsSwiperComponent } from './Components/Shared/solutions-swiper/solutions-swiper.component';
 import { Tabs2Component } from './Components/Shared/tabs2/tabs2.component';
 import { SolutionSwiperDatabaseComponent } from './Components/Shared/solution-swiper-database/solution-swiper-database.component';
-import { TascusRestApiComponent } from './Components/Pages/blogs/blogs/tascus-rest-api/tascus-rest-api.component';
 import { CareersComponent } from './Components/Pages/jobs/careers/careers.component';
 import { JobListComponent } from './Components/Pages/jobs/careers/list/list.component';
 import { BusinessDevelopmentExecutiveComponent } from './Components/Pages/jobs/careers/business-development-executive/business-development-executive.component';
-import { Page404Component } from './Components/Pages/page404/page404.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment.development';
-import { BlogPostingComponent } from './Components/Shared/blog-posting/blog-posting.component';
 import { BlogShowComponent } from './Components/Shared/blog-show/blog-show.component';
 import { AdminPanelComponent } from './Components/Pages/admin-panel/admin-panel.component';
 import { NewBlogComponent } from './Components/Pages/new-blog/new-blog.component';
 import { FormsModule } from '@angular/forms';
 import { AngularEditorModule } from '@kolkov/angular-editor';
+import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 @NgModule({
   declarations: [
     AppComponent,
@@ -63,19 +60,15 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     PrivacyPolicyComponent,
     BlogsComponent,
     BlogListComponent,
-    BlogDocumentApprovalSpfxComponentComponent,
     TabsComponent,
     ProjectsComponent,
     ReviewComponent,
     SolutionsSwiperComponent,
     Tabs2Component,
     SolutionSwiperDatabaseComponent,
-    TascusRestApiComponent,
     CareersComponent,
     JobListComponent,
     BusinessDevelopmentExecutiveComponent,
-    Page404Component,
-    BlogPostingComponent,
     BlogShowComponent,
     AdminPanelComponent,
     NewBlogComponent,
@@ -88,6 +81,7 @@ import { AngularEditorModule } from '@kolkov/angular-editor';
     AppRoutingModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireStorageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

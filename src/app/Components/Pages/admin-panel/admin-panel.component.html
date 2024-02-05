@@ -20,37 +20,37 @@
                  <ul>
                      <li>
                         <a href="" class="active">
-                             <span class="las la-home"></span>
+                            <span class="fa fa-home" aria-hidden="true"></span>
                              <small>Dashboard</small>
                          </a>
                      </li>
                      <li>
                         <a routerLink="/about-us">
-                             <span class="las la-user-alt"></span>
+                             <span class="fa fa-building" aria-hidden="true"></span>
                              <small>About us</small>
                          </a>
                      </li>
                      <li>
                         <a routerLink="/contact-us">
-                             <span class="las la-envelope"></span>
+                            <span class="fa fa-phone-square" aria-hidden="true"></span>
                              <small>Contact us</small>
                          </a>
                      </li>
                      <li>
                         <a routerLink="/blogs">
-                             <span class="las la-clipboard-list"></span>
+                            <span class="fa fa-list-alt" aria-hidden="true"></span>
                              <small>Blogs</small>
                          </a>
                      </li>
                      <li>
                         <a href="">
-                             <span class="las la-shopping-cart"></span>
+                            <span class="fa fa-meetup" aria-hidden="true"></span>
                              <small>Orders</small>
                          </a>
                      </li>
                      <li>
                         <a href="">
-                             <span class="las la-tasks"></span>
+                            <span class="fa fa-thumb-tack" aria-hidden="true"></span>
                              <small>Tasks</small>
                          </a>
                      </li>
@@ -65,28 +65,28 @@
          <header>
              <div class="header-content">
                  <label for="menu-toggle">
-                     <span class="las la-bars"></span>
+                    <span class="fa fa-bars" aria-hidden="true"></span>
                  </label>
                  
                  <div class="header-menu">
                      <label for="">
-                         <span class="las la-search"></span>
+                        <span class="fa fa-search" aria-hidden="true"></span>
                      </label>
                      
                      <div class="notify-icon">
-                         <span class="las la-envelope"></span>
+                        <span class="fa fa-envelope-o" aria-hidden="true"></span>
                          <span class="notify">4</span>
                      </div>
                      
                      <div class="notify-icon">
-                         <span class="las la-bell"></span>
+                        <span class="fa fa-bell" aria-hidden="true"></span>
                          <span class="notify">3</span>
                      </div>
                      
                      <div class="user">
                          <div class="bg-img" style="background-image: url(../../../../assets/img/faces/mujassir.jpg)"></div>
                          
-                         <span class="las la-power-off"></span>
+                         <span class="fa fa-power-off" aria-hidden="true"></span>
                          <span>Logout</span>
                      </div>
                  </div>
@@ -168,7 +168,7 @@
                              <select name="" id="">
                                  <option value="">ID</option>
                              </select>
-                             <button><a routerLink="/new-blog" class="addbtn">Add new Blog</a></button>
+                             <button><a routerLink="/blogs/new-blog" class="addbtn">Add new Blog</a></button>
                              
                          </div>
                         
@@ -185,10 +185,11 @@
                             <thead>
                               <tr>
                                 <th>#</th>
+                                <th><span class="las la-sort"></span> Author</th>
                                 <th><span class="las la-sort"></span> Title</th>
                                 <th><span class="las la-sort"></span> Stack</th>
                                 <th><span class="las la-sort"></span> Description</th>
-                                <th><span class="las la-sort"></span> Breadcrumb</th>
+                                <!-- <th><span class="las la-sort"></span> Breadcrumb</th> -->
                                 <th><span class="las la-sort"></span> ACTIONS</th>
                               </tr>
                             </thead>
@@ -197,23 +198,40 @@
                                 <td>{{ i + 1 }}</td>
                                 <td>
                                   <div class="client">
-                                    <div class="client-img bg-img" [style.backgroundImage]="'url(' + blog.image + ')'"></div>
+                                    <div class="client-img bg-img" [style.backgroundImage]="'url(' + blog.authorPicUrl + ')'"></div>
                                     <div class="client-info">
-                                      <h4>{{ truncateText(blog.title, 30) }}</h4>
-                                      <small>{{ blog.breadcrumb }}</small>
+                                      <h4>{{ truncateText(blog.author, 20) }}</h4>
+                                      <!-- <small>{{ blog.breadcrumb }}</small> -->
                                     </div>
                                   </div>
                                 </td>
-                                <td>{{ blog.stack }}</td>
-                                <td>{{ truncateText(blog.description, 30) }}</td>
-                                <td>{{ blog.breadcrumb}}</td>
                                 <td>
-                                  <div class="actions">
+                                    <div class="client">
+                                      <div class="client-img bg-img" [style.backgroundImage]="'url(' + blog.blogImageUrl + ')'"></div>
+                                      <div class="client-info">
+                                        <h4>{{ truncateText(blog.title, 20) }}</h4>
+                                        <small>{{ truncateText(blog.breadcrumb, 20) }}</small>
+                                      </div>
+                                    </div>
+                                  </td>
+                                <td>{{ blog.stack }}</td>
+                                <td>{{ truncateText(blog.description, 20) }}</td>
+                                <!-- <td>{{ blog.breadcrumb}}</td> -->
+                                <td>
+                                  <div class="actions ">
                                       
                                     
-                                    <a [routerLink]="['/new-blog',blog.id ]"><span class="las la-edit"></span></a>
-                                    <a [routerLink]="['/blogShow', blog.id]"><span class="las la-eye"></span></a>
-                                    <a  (click)="openModal(blog.id)"><span class="las la-trash"></span></a>
+                                    <a [routerLink]="['/blogs/new-blog', blog.id]" class="icon-tooltip" data-tooltip="Edit your blog">
+                                        <span class="fa fa-edit fz-20px"></span>
+                                      </a>
+                                      
+                                      <a [routerLink]="['/blogs/blogShow', blog.id]" class="icon-tooltip" data-tooltip="View your blog">
+                                        <span class="fa fa-eye fz-20px" aria-hidden="true"></span>
+                                      </a>
+                                      
+                                      <a (click)="openModal(blog.id)" class="icon-tooltip" data-tooltip="Delete your blog">
+                                        <span class="fa fa-trash fz-20px"></span>
+                                      </a>
                                     
                                     <div class="modal" *ngIf="isModalOpen">
                                         <div class="modal-content">
@@ -227,9 +245,7 @@
                                 </td>
                               </tr>
                             </tbody>
-                              
-                            
-                          </table>
+                         </table>
 
                           
                      </div>

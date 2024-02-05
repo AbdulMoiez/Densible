@@ -1,0 +1,9 @@
+.mil-tags li a {
+    display: inline-flex;
+    margin-bottom: 10px;
+    font-size: 12px;
+    padding: 0 10px;
+    border-radius: 20px;
+    color: #121820;
+    transition: .2s cubic-bezier(0, 0, .3642, 1);
+}

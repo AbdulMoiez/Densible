@@ -26,14 +26,23 @@ export class AdminPanelComponent implements OnInit {
     }, 3000);
   }
   ngOnInit(): void {
-    this.blogData.getData().subscribe((res) => {
-      this.Blogs = res.map((e) => {
-        return {
-          id: e.payload.doc.id,
-          ...(e.payload.doc.data() as {}),
-        } as Blogs;
-      });
-    });
+    this.blogData.getData().subscribe(
+      (res: any[]) => {
+        console.log('Received data:', res);
+  
+        this.Blogs = res 
+          .map((e) => {
+            const blog = e as Blogs;
+            console.log('Mapped blog:', blog);
+            return blog;
+          });
+  
+        console.log('Blogs array:', this.Blogs);
+      },
+      (error) => {
+        console.error('Error fetching data:', error);
+      }
+    );
   }
   openModal(id: any) {
     this.isModalOpen = true;
